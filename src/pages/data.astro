@@ -1,0 +1,214 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Data Handling & Architecture Disclosure" description="Technical architecture and data handling disclosure for Yield Force integrations across Meta, Shopify, TikTok, and LinkedIn.">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <!-- Header -->
+    <div class="mb-12 border-b border-slate-800 pb-8">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-400 text-xs font-medium mb-4">
+        Platform Verification & Security Architecture
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-3">Data Handling Disclosure</h1>
+      <p class="text-sm text-slate-400 leading-relaxed max-w-2xl">
+        This technical disclosure outlines the architecture, channels, data flows, storage security, access controls, and deletion mechanisms implemented by Yield Force for compliance review with Meta, TikTok, LinkedIn, and Shopify platform partner programs.
+      </p>
+    </div>
+
+    <div class="space-y-12 text-sm leading-relaxed text-slate-300">
+      <!-- Channel Data Matrix -->
+      <section class="space-y-4">
+        <h2 class="text-xl font-semibold text-white tracking-tight">1. Data Collected Per Connected Channel</h2>
+        <p>
+          Yield Force ingests only scopes strictly required for real-time customer conversation resolution and order lookup:
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <!-- WhatsApp / Meta -->
+          <div class="p-5 rounded-2xl border border-slate-800 bg-slate-900/60">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+              <h3 class="font-bold text-white text-base">WhatsApp & Meta Channels</h3>
+            </div>
+            <p class="text-xs text-slate-400 mb-2 font-mono">Scope: WhatsApp Cloud API, Instagram Messaging, FB Messenger</p>
+            <ul class="list-disc pl-4 space-y-1 text-xs text-slate-300">
+              <li>Inbound customer message bodies, media attachments, timestamps</li>
+              <li>Delivery receipts and message status updates (sent, delivered, read)</li>
+              <li>Customer telephone numbers (hashed/masked in audit logs) and sender IDs</li>
+              <li>Merchant WhatsApp Business Account (WABA) IDs and phone number IDs</li>
+            </ul>
+          </div>
+
+          <!-- Shopify -->
+          <div class="p-5 rounded-2xl border border-slate-800 bg-slate-900/60">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="w-2.5 h-2.5 rounded-full bg-emerald-400"></span>
+              <h3 class="font-bold text-white text-base">Shopify Storefront & Admin</h3>
+            </div>
+            <p class="text-xs text-slate-400 mb-2 font-mono">Scope: read_orders, read_products, read_inventory</p>
+            <ul class="list-disc pl-4 space-y-1 text-xs text-slate-300">
+              <li>Order identifiers, fulfillment status, and carrier tracking links</li>
+              <li>Product catalog details (titles, variants, pricing, inventory levels)</li>
+              <li>Store policy URLs (returns, shipping terms, FAQ guidelines)</li>
+              <li>Zero payment credentials or credit card PANs are ever accessed or stored</li>
+            </ul>
+          </div>
+
+          <!-- TikTok -->
+          <div class="p-5 rounded-2xl border border-slate-800 bg-slate-900/60">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="w-2.5 h-2.5 rounded-full bg-pink-500"></span>
+              <h3 class="font-bold text-white text-base">TikTok For Business</h3>
+            </div>
+            <p class="text-xs text-slate-400 mb-2 font-mono">Scope: Lead Generation API, Campaign Reporting</p>
+            <ul class="list-disc pl-4 space-y-1 text-xs text-slate-300">
+              <li>Aggregated campaign ad metrics (impressions, clicks, conversions)</li>
+              <li>Instant Lead Form webhook payloads for automated conversation dispatch</li>
+              <li>Lead timestamps and basic lead submission attributes</li>
+            </ul>
+          </div>
+
+          <!-- LinkedIn -->
+          <div class="p-5 rounded-2xl border border-slate-800 bg-slate-900/60">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="w-2.5 h-2.5 rounded-full bg-blue-500"></span>
+              <h3 class="font-bold text-white text-base">LinkedIn Marketing Solutions</h3>
+            </div>
+            <p class="text-xs text-slate-400 mb-2 font-mono">Scope: Lead Gen Forms API, Ad Analytics</p>
+            <ul class="list-disc pl-4 space-y-1 text-xs text-slate-300">
+              <li>Aggregated campaign performance metrics and engagement figures</li>
+              <li>Lead Gen Form submission data for automated routing to merchant CRM</li>
+              <li>Form metadata and consent timestamps</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Storage & Encryption -->
+      <section class="space-y-4">
+        <h2 class="text-xl font-semibold text-white tracking-tight">2. Storage, Cryptography & Encryption Standards</h2>
+        <div class="p-6 rounded-2xl border border-slate-800 bg-slate-900/40 space-y-4">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <h4 class="text-sm font-semibold text-white mb-2">Encryption at Rest</h4>
+              <p class="text-xs text-slate-300 leading-relaxed">
+                All relational databases, conversational transcripts, vectors, and backups are encrypted at rest using industry-standard <strong class="text-white">AES-256</strong> encryption via hardware security modules (HSM) managed within our Supabase EU infrastructure.
+              </p>
+            </div>
+            <div>
+              <h4 class="text-sm font-semibold text-white mb-2">Encryption in Transit</h4>
+              <p class="text-xs text-slate-300 leading-relaxed">
+                All data in transit across public networks is enforced via modern <strong class="text-white">TLS (TLS 1.2 / TLS 1.3)</strong> cryptographic protocols with Perfect Forward Secrecy (PFS). Unencrypted plaintext HTTP traffic is strictly prohibited and automatically redirected.
+              </p>
+            </div>
+          </div>
+          <div class="pt-4 border-t border-slate-800/80">
+            <h4 class="text-sm font-semibold text-white mb-1">Geographic Region</h4>
+            <p class="text-xs text-slate-400">
+              Database and backend hosting cluster: <strong class="text-white">European Union (Frankfurt / Ireland)</strong>. LLM inference: <strong class="text-white">Google Cloud Vertex AI (europe-west1)</strong>.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Access Controls & Tenant Isolation -->
+      <section class="space-y-4">
+        <h2 class="text-xl font-semibold text-white tracking-tight">3. Access Controls & Sovereign Multi-Tenancy</h2>
+        <div class="p-6 rounded-2xl border border-slate-800 bg-slate-900/40 space-y-4">
+          <p class="text-slate-300">
+            Yield Force enforces database-level isolation between merchants through PostgreSQL <strong class="text-white">Row-Level Security (RLS)</strong>:
+          </p>
+          <ul class="list-disc pl-5 space-y-2 text-xs text-slate-300">
+            <li><strong class="text-white">Tenant Partitioning via <code>sovereign_key</code>:</strong> Every database query is scoped by an immutable, cryptographically generated sovereign key. Cross-tenant queries are rejected at the PostgreSQL query engine layer.</li>
+            <li><strong class="text-white">Zero Cross-Tenant Access:</strong> Merchant A's conversational threads, orders, and knowledge embeddings can never be accessed, queried, or leaked to Merchant B.</li>
+            <li><strong class="text-white">Zero Model Training on Merchant Data:</strong> Merchant conversations and customer queries are never used to train or fine-tune public baseline LLMs. Prompts are ephemeral and processed in isolated inference containers.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Deletion & Lifecycle -->
+      <section class="space-y-4">
+        <h2 class="text-xl font-semibold text-white tracking-tight">4. Data Deletion & GDPR Cascade Purge</h2>
+        <div class="p-6 rounded-2xl border border-slate-800 bg-slate-900/40 space-y-4">
+          <p class="text-slate-300">
+            We provide automated, end-to-end data erasure capabilities honoring merchant control and individual data subject requests:
+          </p>
+          <ul class="list-disc pl-5 space-y-2 text-xs text-slate-300">
+            <li><strong class="text-white">Merchant App Uninstall:</strong> Receipt of Shopify's <code>app/uninstalled</code> webhook triggers an automated GDPR cascade delete. All merchant credentials, active sessions, conversation logs, and catalog cache are permanently purged within 48 hours.</li>
+            <li><strong class="text-white">Shopify Mandatory GDPR Webhooks:</strong> Yield Force natively processes <code>customers/data_request</code>, <code>customers/redact</code>, and <code>shop/redact</code> webhooks with cryptographic receipt logging.</li>
+            <li><strong class="text-white">Configurable Retention:</strong> Conversations expire and are permanently purged after 90 days by default, or immediately upon ticket resolution if configured by the merchant.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Subprocessors Table -->
+      <section class="space-y-4">
+        <h2 class="text-xl font-semibold text-white tracking-tight">5. Subprocessors Reference</h2>
+        <p>
+          Below is the verified registry of infrastructure partners utilized by Yield Force:
+        </p>
+
+        <div class="overflow-x-auto">
+          <table class="min-w-full text-left border border-slate-800 rounded-xl overflow-hidden text-xs">
+            <thead class="bg-slate-900 text-slate-300 border-b border-slate-800">
+              <tr>
+                <th class="p-3.5">Subprocessor Name</th>
+                <th class="p-3.5">Function & Purpose</th>
+                <th class="p-3.5">Hosting Region</th>
+                <th class="p-3.5">DPA Reference</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-800/60 bg-slate-900/30">
+              <tr>
+                <td class="p-3.5 font-semibold text-white">Supabase Inc.</td>
+                <td class="p-3.5">Primary relational database, tenant auth, row-level security</td>
+                <td class="p-3.5">EU Region (Frankfurt / Ireland)</td>
+                <td class="p-3.5">
+                  <a href="https://supabase.com/legal/dpa" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-300 underline">supabase.com/legal/dpa</a>
+                </td>
+              </tr>
+              <tr>
+                <td class="p-3.5 font-semibold text-white">Google Cloud (Vertex AI)</td>
+                <td class="p-3.5">LLM inference, embeddings generation (Stateless processing)</td>
+                <td class="p-3.5">europe-west1 (Belgium)</td>
+                <td class="p-3.5">
+                  <a href="https://cloud.google.com/terms/data-processing-addendum" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-300 underline">cloud.google.com/terms/dpa</a>
+                </td>
+              </tr>
+              <tr>
+                <td class="p-3.5 font-semibold text-white">Resend Inc.</td>
+                <td class="p-3.5">Transactional system notifications and merchant alerts</td>
+                <td class="p-3.5">US / Global (Standard Contractual Clauses)</td>
+                <td class="p-3.5">
+                  <a href="https://resend.com/legal/dpa" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-300 underline">resend.com/legal/dpa</a>
+                </td>
+              </tr>
+              <tr>
+                <td class="p-3.5 font-semibold text-white">Cloudflare Inc.</td>
+                <td class="p-3.5">Edge routing, Web Application Firewall (WAF), DNS, DDoS protection</td>
+                <td class="p-3.5">Global Edge Network (EU Data Localization)</td>
+                <td class="p-3.5">
+                  <a href="https://www.cloudflare.com/cloudflare-customer-dpa/" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-300 underline">cloudflare.com/dpa</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Security Contact -->
+      <section class="space-y-4 border-t border-slate-800 pt-8">
+        <h2 class="text-xl font-semibold text-white tracking-tight">6. Security & Vulnerability Reporting Contact</h2>
+        <p>
+          For security audits, platform compliance documentation, or vulnerability disclosure under responsible disclosure guidelines, please contact our security team directly:
+        </p>
+        <div class="bg-slate-900/60 p-5 rounded-xl border border-slate-800 text-xs space-y-2 text-slate-300">
+          <p><strong class="text-white">Security & Data Protection Officer Contact:</strong> <a href="mailto:dev@yieldforce.dev" class="text-blue-400 hover:underline">dev@yieldforce.dev</a></p>
+          <p><strong class="text-white">Operating Company:</strong> Gaia Holdings Limited</p>
+          <p><strong class="text-white">Governing Law:</strong> England and Wales</p>
+          <p class="text-slate-400">PGP encryption key available upon email request.</p>
+        </div>
+      </section>
+    </div>
+  </div>
+</Layout>

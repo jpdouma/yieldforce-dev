@@ -1,0 +1,93 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Contact" description="Get in touch with the Yield Force team for merchant inquiries, partnership questions, or technical support.">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <!-- Header -->
+    <div class="text-center max-w-2xl mx-auto mb-16">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-400 text-xs font-medium mb-4">
+        Support & Partnerships
+      </div>
+      <h1 class="text-4xl font-extrabold text-white tracking-tight mb-4">Get in touch</h1>
+      <p class="text-base text-slate-300">
+        Have questions about onboarding Yield Force, API integrations, or compliance? Our team is here to assist.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+      <!-- Contact Card: Merchants -->
+      <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-8 flex flex-col justify-between">
+        <div>
+          <div class="w-10 h-10 rounded-xl bg-blue-600/20 border border-blue-500/30 text-blue-400 flex items-center justify-center mb-6">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+            </svg>
+          </div>
+          <h2 class="text-xl font-bold text-white mb-2">For Merchants</h2>
+          <p class="text-sm text-slate-400 leading-relaxed mb-6">
+            Install Yield Force directly on your Shopify store to enable instant AI customer support and automated messaging across WhatsApp and Meta channels.
+          </p>
+        </div>
+
+        <div class="pt-6 border-t border-slate-800">
+          <a
+            href="https://apps.shopify.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 text-sm font-semibold text-white bg-slate-800 hover:bg-slate-700 border border-slate-700 px-4 py-2.5 rounded-xl transition-all w-full justify-center"
+          >
+            <span>Shopify App Store</span>
+            <span class="text-xs text-blue-400 font-mono">(Coming Soon)</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Contact Card: Business & Support Enquiries -->
+      <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-8 flex flex-col justify-between">
+        <div>
+          <div class="w-10 h-10 rounded-xl bg-indigo-600/20 border border-indigo-500/30 text-indigo-400 flex items-center justify-center mb-6">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+          </div>
+          <h2 class="text-xl font-bold text-white mb-2">For Business Enquiries</h2>
+          <p class="text-sm text-slate-400 leading-relaxed mb-6">
+            Direct your enterprise queries, API partner integration requests, and security or compliance questions to our core development team.
+          </p>
+        </div>
+
+        <div class="pt-6 border-t border-slate-800">
+          <a
+            href="mailto:dev@yieldforce.dev"
+            class="inline-flex items-center gap-2 text-sm font-semibold text-white bg-blue-600 hover:bg-blue-500 px-4 py-2.5 rounded-xl transition-all w-full justify-center shadow-md shadow-blue-600/20"
+          >
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+            <span>dev@yieldforce.dev</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Company Registered Office Details -->
+    <div class="rounded-2xl border border-slate-800 bg-[#070c18] p-8">
+      <h3 class="text-sm font-semibold uppercase tracking-wider text-slate-400 mb-4">Corporate Information</h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-xs text-slate-300">
+        <div>
+          <span class="block text-slate-500 mb-1">Company Name</span>
+          <strong class="text-white text-sm">Gaia Holdings Limited</strong>
+        </div>
+        <div>
+          <span class="block text-slate-500 mb-1">Registered Office</span>
+          <span class="text-white text-sm">England and Wales</span>
+        </div>
+        <div>
+          <span class="block text-slate-500 mb-1">Primary Communications</span>
+          <a href="mailto:dev@yieldforce.dev" class="text-blue-400 hover:underline text-sm">dev@yieldforce.dev</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
