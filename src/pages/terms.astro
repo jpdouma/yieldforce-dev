@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Terms of Service" description="B2B Terms of Service governing the use of Yield Force AI sales automation platform, operated by Gaia Holdings Limited.">
+<Layout title="Terms of Service" description="B2B Terms of Service governing the use of Yield Force AI sales automation platform, operated by Gaia Holdings Limited, incorporated in Uganda.">
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
     <!-- Header -->
     <div class="mb-12 border-b border-slate-800 pb-8">
@@ -11,121 +11,569 @@ import Layout from '../layouts/Layout.astro';
       </div>
       <h1 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-3">Terms of Service</h1>
       <p class="text-sm text-slate-400">
-        Last updated: <span class="text-slate-300 font-medium">2026-09-21</span> · Effective immediately
+        Effective date: <span class="text-slate-300 font-medium">22 September 2026</span> · Last updated: <span class="text-slate-300 font-medium">22 September 2026</span>
+      </p>
+      <p class="text-xs text-slate-500 mt-2">
+        <strong class="text-slate-400">Yield Force</strong> is a trading name of <strong class="text-slate-400">Gaia Holdings Limited</strong>, a company incorporated and registered in Uganda.
       </p>
     </div>
 
-    <!-- Content Sections -->
+    <!-- Content -->
     <div class="prose prose-invert max-w-none text-slate-300 space-y-10 text-sm leading-relaxed">
-      <!-- 1. Parties & Acceptance -->
+
+      <!-- Preamble -->
       <section class="space-y-3">
-        <h2 class="text-xl font-semibold text-white tracking-tight">1. The Parties</h2>
+        <h2 class="text-xl font-semibold text-white tracking-tight">Preamble</h2>
         <p>
-          These Terms of Service ("Agreement") form a legally binding contract entered into between:
+          These Terms of Service (the "<strong class="text-white">Agreement</strong>") form a legally binding contract between <strong class="text-white">Gaia Holdings Limited</strong> (incorporated in Uganda under the Companies Act, 2012, trading as <strong class="text-white">Yield Force</strong> — "<strong class="text-white">Supplier</strong>", "<strong class="text-white">we</strong>", "<strong class="text-white">us</strong>", "<strong class="text-white">our</strong>") and the merchant entity accessing or using the Yield Force platform ("<strong class="text-white">Merchant</strong>", "<strong class="text-white">Customer</strong>", "<strong class="text-white">you</strong>").
         </p>
-        <ul class="list-disc pl-5 space-y-1.5 text-slate-300">
-          <li><strong class="text-white">Gaia Holdings Limited</strong>, a company incorporated and registered under the laws of Uganda ("Yield Force", "Provider", "we", "us"); and</li>
-          <li><strong class="text-white">The Registered Merchant</strong> ("Merchant", "Client", "you"), being the commercial business entity installing, configuring, or accessing the Yield Force application or service.</li>
-        </ul>
         <p>
-          By installing the Yield Force application via the Shopify App Store, integrating API credentials, or otherwise accessing the service, you confirm that you have read, understood, and agreed to be bound by this Agreement.
+          By installing the Yield Force application via the Shopify App Store, creating an account, or otherwise accessing the platform, you agree to be bound by this Agreement in its entirety.
         </p>
+        <div class="bg-blue-900/20 border border-blue-700/30 rounded-xl p-4 text-slate-300 text-xs leading-relaxed">
+          <strong class="text-white">This Agreement is a business-to-business contract.</strong> By accepting these terms, the Merchant warrants that it enters into this Agreement solely in the course of its trade, business, craft, or profession — <strong class="text-white">not as a consumer</strong>. Consumer protection legislation applicable to consumer contracts does not govern this Agreement.
+        </div>
       </section>
 
-      <!-- 2. The Service -->
+      <!-- Document Hierarchy -->
       <section class="space-y-3">
-        <h2 class="text-xl font-semibold text-white tracking-tight">2. The Service & API Integrations</h2>
-        <p>
-          Yield Force provides an enterprise B2B software-as-a-service (SaaS) platform facilitating AI-driven sales automation, customer communication routing, and commerce integrations. Key capabilities include:
-        </p>
-        <ul class="list-disc pl-5 space-y-1.5 text-slate-300">
-          <li>Shopify Admin API synchronization for catalog inventory, pricing, and order tracking.</li>
-          <li>Conversational messaging connectivity across Meta platforms (WhatsApp Cloud API, Instagram Messaging, Facebook Messenger), TikTok, and LinkedIn.</li>
-          <li>Automated large language model (LLM) inference for real-time customer support and sales conversion.</li>
-        </ul>
-        <p>
-          The service is provided on a commercial subscription basis subject to platform uptime targets and scheduled maintenance windows.
-        </p>
+        <h2 class="text-xl font-semibold text-white tracking-tight">Document Hierarchy</h2>
+        <p>Where any conflict exists between documents forming part of this Agreement, the following order of precedence applies:</p>
+        <ol class="list-decimal pl-5 space-y-1.5 text-slate-300">
+          <li>Executed Enterprise Order Form or Schedule (if any)</li>
+          <li>Data Processing Addendum (DPA) — solely with respect to personal data processing</li>
+          <li>These Terms of Service (Master Agreement)</li>
+          <li>Acceptable Use Policy (Appendix A)</li>
+          <li>Product documentation and specifications</li>
+        </ol>
       </section>
 
-      <!-- 3. Acceptable Use -->
+      <!-- 1. Definitions -->
       <section class="space-y-3">
-        <h2 class="text-xl font-semibold text-white tracking-tight">3. Acceptable Use Policy</h2>
-        <p>
-          Yield Force is strictly licensed for legitimate B2B commercial operations. Merchants must not use or permit any third party to use the service to:
-        </p>
-        <ul class="list-disc pl-5 space-y-1.5 text-slate-300">
-          <li>Transmit unsolicited bulk marketing messages, phishing, or abusive spam in violation of WhatsApp Business Terms or telecommunication regulations.</li>
-          <li>Distribute unlawful, fraudulent, defamatory, obscene, harassing, or trademark-infringing content.</li>
-          <li>Reverse-engineer, decompile, scrape, or extract the proprietary model weights, prompts, or orchestration pipelines of Yield Force.</li>
-          <li>Bypass security controls, tenant isolation safeguards, or rate-limiting thresholds.</li>
-        </ul>
-        <p>
-          We reserve the right to immediately suspend or terminate access without notice if a Merchant breaches this Acceptable Use Policy.
-        </p>
+        <h2 class="text-xl font-semibold text-white tracking-tight">1. Definitions</h2>
+        <div class="overflow-x-auto">
+          <table class="min-w-full text-left border border-slate-800 rounded-xl overflow-hidden text-xs">
+            <thead class="bg-slate-900/80 text-slate-300 border-b border-slate-800">
+              <tr>
+                <th class="p-3 font-semibold text-white">Term</th>
+                <th class="p-3 font-semibold text-white">Meaning</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-800/60 bg-slate-900/30">
+              <tr><td class="p-3 font-semibold text-white whitespace-nowrap">Services</td><td class="p-3">The Yield Force AI-powered sales automation platform, including all Zones (0–7), agent swarms, APIs, dashboards, and integrations</td></tr>
+              <tr><td class="p-3 font-semibold text-white whitespace-nowrap">Platform</td><td class="p-3">The software, infrastructure, and systems operated by Gaia Holdings Limited to deliver the Services</td></tr>
+              <tr><td class="p-3 font-semibold text-white whitespace-nowrap">Merchant Data</td><td class="p-3">All data, content, product catalogs, policies, and knowledge base materials uploaded by the Merchant</td></tr>
+              <tr><td class="p-3 font-semibold text-white whitespace-nowrap">Customer Personal Data</td><td class="p-3">Personal data of end consumers (shoppers) processed by the Supplier on behalf of the Merchant</td></tr>
+              <tr><td class="p-3 font-semibold text-white whitespace-nowrap">Subscription Fee</td><td class="p-3">The recurring base fee payable for access to the Platform</td></tr>
+              <tr><td class="p-3 font-semibold text-white whitespace-nowrap">Performance Fee</td><td class="p-3">The variable fee based on Attributed Net Sales generated through the Platform</td></tr>
+              <tr><td class="p-3 font-semibold text-white whitespace-nowrap">Attributed Net Sales</td><td class="p-3">Net product sales (excluding VAT, discounts, and shipping) arising from Yield Force-assisted conversational checkouts within the attribution window, as defined in Clause 7</td></tr>
+              <tr><td class="p-3 font-semibold text-white whitespace-nowrap">WABA</td><td class="p-3">WhatsApp Business Account — the Merchant's registered business messaging account on Meta's WhatsApp Cloud API</td></tr>
+              <tr><td class="p-3 font-semibold text-white whitespace-nowrap">Sovereign Key</td><td class="p-3">The per-tenant cryptographic identifier enforcing multi-tenant data isolation within the Platform</td></tr>
+              <tr><td class="p-3 font-semibold text-white whitespace-nowrap">Zone 5 Governance Portal</td><td class="p-3">The Merchant-facing administrative interface for supervising, overriding, and configuring AI agent behaviour</td></tr>
+              <tr><td class="p-3 font-semibold text-white whitespace-nowrap">Insolvency Event</td><td class="p-3">Any of: administration, liquidation, receivership, voluntary arrangement, winding-up, or analogous proceedings under the Uganda Insolvency Act, 2011 or equivalent applicable law</td></tr>
+            </tbody>
+          </table>
+        </div>
       </section>
 
-      <!-- 4. Fees & Billing -->
-      <section class="space-y-3">
-        <h2 class="text-xl font-semibold text-white tracking-tight">4. Payment, Subscriptions & Usage Charges</h2>
-        <p>
-          Subscription fees and usage tariffs are defined per the published Shopify App Store listing and selected subscription plan:
-        </p>
-        <ul class="list-disc pl-5 space-y-1.5 text-slate-300">
-          <li><strong class="text-white">Subscription Fees:</strong> Billed on a recurring 30-day billing cycle directly through Shopify's App Billing API.</li>
-          <li><strong class="text-white">Usage Charges:</strong> Message volume beyond tier allowances or third-party WhatsApp conversation charges are metered and billed as usage fees per your plan specification.</li>
-          <li><strong class="text-white">Taxes:</strong> All fees are exclusive of VAT or applicable sales taxes, which are assessed based on the Merchant's business location.</li>
-        </ul>
+      <!-- 2. License Grant -->
+      <section class="space-y-4">
+        <h2 class="text-xl font-semibold text-white tracking-tight">2. License Grant and Permitted Use</h2>
+        <div class="space-y-3">
+          <h3 class="text-base font-semibold text-slate-200">2.1 License</h3>
+          <p>Subject to payment of applicable fees and compliance with this Agreement, the Supplier grants the Merchant a <strong class="text-white">non-exclusive, non-transferable, non-sublicensable, revocable</strong> right to access and use the Services during the Subscription Term, solely for the Merchant's internal business operations.</p>
+        </div>
+        <div class="space-y-3">
+          <h3 class="text-base font-semibold text-slate-200">2.2 Tenant Isolation</h3>
+          <p>The Merchant's access to the Platform is strictly bounded by its provisioned Sovereign Key. Any attempt to:</p>
+          <ul class="list-disc pl-5 space-y-1.5">
+            <li>Circumvent multi-tenant data isolation boundaries;</li>
+            <li>Access, probe, or extract data belonging to another tenant;</li>
+            <li>Reverse-engineer API endpoints, prompt architectures, or AI model weights;</li>
+          </ul>
+          <p>constitutes a <strong class="text-white">non-curable material breach</strong> of this Agreement, entitling the Supplier to terminate immediately and seek injunctive relief without further notice.</p>
+        </div>
+        <div class="space-y-3">
+          <h3 class="text-base font-semibold text-slate-200">2.3 Authorised Users</h3>
+          <p>The Merchant is solely responsible for all activity conducted under its credentials, including activity by its staff, agents, and any third parties (such as marketing agencies) granted access to the Zone 4/5 dashboards.</p>
+        </div>
       </section>
 
-      <!-- 5. Limitation of Liability -->
-      <section class="space-y-3">
-        <h2 class="text-xl font-semibold text-white tracking-tight">5. Limitation of Liability</h2>
-        <p>
-          To the maximum extent permitted under applicable law:
-        </p>
-        <ul class="list-disc pl-5 space-y-1.5 text-slate-300">
-          <li>Neither party shall be liable for indirect, consequential, special, punitive, or lost-profit damages arising under or in connection with this Agreement.</li>
-          <li><strong class="text-white">Aggregate Liability Cap:</strong> The total cumulative liability of Gaia Holdings Limited for any and all claims, whether sounding in contract, tort (including negligence), breach of statutory duty, or otherwise, <strong class="text-white">shall in no event exceed the total subscription and usage fees paid by the Merchant to Gaia Holdings Limited in the three (3) months immediately preceding the event giving rise to liability.</strong></li>
-        </ul>
+      <!-- 3. Services & Availability -->
+      <section class="space-y-4">
+        <h2 class="text-xl font-semibold text-white tracking-tight">3. Services, Availability, and Service Levels</h2>
+        <div class="space-y-3">
+          <h3 class="text-base font-semibold text-slate-200">3.1 Availability Target</h3>
+          <p>The Supplier targets <strong class="text-white">99.5% monthly uptime</strong> for the core ingress and routing layer (Zone 2 Refinery Gateway), measured on a rolling 30-day calendar basis, excluding Scheduled Maintenance, Force Majeure, and third-party platform outages.</p>
+        </div>
+        <div class="space-y-3">
+          <h3 class="text-base font-semibold text-slate-200">3.2 Exclusions</h3>
+          <p>Availability measurements exclude downtime caused by:</p>
+          <ul class="list-disc pl-5 space-y-1.5">
+            <li>Scheduled maintenance (with prior notice where practicable);</li>
+            <li>Emergency security patches;</li>
+            <li>Failures of Meta Platforms APIs or Shopify APIs;</li>
+            <li>Acts of Force Majeure (see Clause 13);</li>
+            <li>Merchant network, browser, or device failures;</li>
+            <li>The Merchant's failure to maintain accounts in good standing with Meta or Shopify.</li>
+          </ul>
+        </div>
+        <div class="space-y-3">
+          <h3 class="text-base font-semibold text-slate-200">3.3 Service Credits (Sole and Exclusive Remedy)</h3>
+          <div class="overflow-x-auto">
+            <table class="min-w-full text-left border border-slate-800 rounded-xl overflow-hidden text-xs">
+              <thead class="bg-slate-900/80 text-slate-300 border-b border-slate-800">
+                <tr>
+                  <th class="p-3 font-semibold text-white">Monthly Uptime</th>
+                  <th class="p-3 font-semibold text-white">Credit</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-800/60 bg-slate-900/30">
+                <tr><td class="p-3">99.0% – 99.49%</td><td class="p-3">5% of monthly Subscription Fee</td></tr>
+                <tr><td class="p-3">95.0% – 98.99%</td><td class="p-3">10% of monthly Subscription Fee</td></tr>
+                <tr><td class="p-3">Below 95.0%</td><td class="p-3">15% of monthly Subscription Fee</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>Service Credits are applied against the Merchant's next invoice and are the <strong class="text-white">Merchant's sole and exclusive remedy</strong> for availability failures, except where the Platform falls below 95% availability for three (3) consecutive calendar months, in which case either party may terminate on 30 days' written notice.</p>
+        </div>
       </section>
 
-      <!-- 6. Term & Termination -->
-      <section class="space-y-3">
-        <h2 class="text-xl font-semibold text-white tracking-tight">6. Term & Termination</h2>
-        <p>
-          This Agreement commences upon Merchant installation or account activation and continues until terminated.
-        </p>
-        <ul class="list-disc pl-5 space-y-1.5 text-slate-300">
-          <li><strong class="text-white">Termination for Convenience:</strong> Either party may terminate this Agreement by providing at least <strong class="text-white">thirty (30) days' written notice</strong> to the other party, or by uninstalling the application via the Shopify Admin prior to the subsequent billing cycle.</li>
-          <li><strong class="text-white">Termination for Cause:</strong> Either party may terminate immediately upon written notice if the other party commits a material breach of this Agreement that remains uncured after 14 days of receipt of written notice.</li>
-          <li><strong class="text-white">Effect of Termination:</strong> Upon termination, Merchant access ceases and customer data is purged in accordance with our GDPR cascade delete policy.</li>
-        </ul>
+      <!-- 4. Term & Termination -->
+      <section class="space-y-4">
+        <h2 class="text-xl font-semibold text-white tracking-tight">4. Term, Renewal, and Termination</h2>
+        <div class="space-y-2">
+          <h3 class="text-base font-semibold text-slate-200">4.1 Term</h3>
+          <p>This Agreement commences on the date the Merchant accepts these Terms and continues for successive monthly (or annual, if selected) billing cycles ("<strong class="text-white">Subscription Term</strong>"), automatically renewing unless cancelled in accordance with Clause 4.3.</p>
+        </div>
+        <div class="space-y-2">
+          <h3 class="text-base font-semibold text-slate-200">4.2 Auto-Renewal</h3>
+          <p>Subscriptions renew automatically at the end of each Subscription Term unless the Merchant cancels at least <strong class="text-white">30 days</strong> prior to renewal (or uninstalls the app via the Shopify Admin before the end of the current billing cycle).</p>
+        </div>
+        <div class="space-y-2">
+          <h3 class="text-base font-semibold text-slate-200">4.3 Termination for Cause</h3>
+          <p>Either party may terminate this Agreement with immediate effect upon written notice if:</p>
+          <ul class="list-disc pl-5 space-y-1.5">
+            <li>The other party commits a <strong class="text-white">material breach</strong> that is incapable of remedy, or fails to remedy a remediable breach within <strong class="text-white">30 days</strong> of written notice specifying the breach; or</li>
+            <li>The other party undergoes an <strong class="text-white">Insolvency Event</strong>.</li>
+          </ul>
+        </div>
+        <div class="space-y-2">
+          <h3 class="text-base font-semibold text-slate-200">4.4 Suspension and Immediate Termination by the Supplier</h3>
+          <p>The Supplier may suspend or terminate the Merchant's access immediately, without prior notice or liability, if:</p>
+          <ul class="list-disc pl-5 space-y-1.5">
+            <li>The Merchant breaches the Acceptable Use Policy (Appendix A);</li>
+            <li>The Merchant fails to pay any sum due and the sum remains outstanding for more than 7 days after the due date;</li>
+            <li>Meta or Shopify requires suspension in connection with the Merchant's account or conduct; or</li>
+            <li>Continued provision of Services would expose the Supplier to legal, regulatory, or reputational risk.</li>
+          </ul>
+        </div>
+        <div class="space-y-2">
+          <h3 class="text-base font-semibold text-slate-200">4.5 Post-Termination Transition</h3>
+          <p>Upon termination or expiry of this Agreement:</p>
+          <ul class="list-disc pl-5 space-y-1.5">
+            <li>The Merchant's access to the Platform terminates immediately;</li>
+            <li>The Merchant is granted a <strong class="text-white">30-day grace period</strong> to retrieve historical conversation logs, attribution analytics, and Merchant Data via the Zone 5 export tools;</li>
+            <li>Following 30 days, the Supplier will permanently purge all Merchant Data, Customer Personal Data, and tenant secrets from the Platform in accordance with Clause 9.8 and GDPR Article 28(3)(g);</li>
+            <li>All accrued fees remain due and payable.</li>
+          </ul>
+        </div>
       </section>
 
-      <!-- 7. Governing Law & Jurisdiction -->
-      <section class="space-y-3">
-        <h2 class="text-xl font-semibold text-white tracking-tight">7. Governing Law & Jurisdiction</h2>
-        <p>
-          This Agreement, its interpretation, and any dispute or claim arising out of or in connection with it or its subject matter or formation (including non-contractual disputes or claims) shall be governed by and construed exclusively in accordance with the laws of <strong class="text-white">Uganda</strong>.
-        </p>
-        <p>
-          The parties irrevocably submit to the exclusive jurisdiction of the courts of Uganda.
-        </p>
+      <!-- 5. AI Operation -->
+      <section class="space-y-4">
+        <h2 class="text-xl font-semibold text-white tracking-tight">5. AI Operation, Probabilistic Output, and Human Oversight</h2>
+        <div class="space-y-2">
+          <h3 class="text-base font-semibold text-slate-200">5.1 Probabilistic Technology</h3>
+          <p>The Merchant acknowledges that the Services utilise artificial intelligence, machine learning, and large language models ("<strong class="text-white">AI Systems</strong>") to generate conversational outputs. The Merchant understands that AI Systems produce <strong class="text-white">probabilistic outputs</strong> that may occasionally contain inaccuracies, omissions, errors, or unintended content ("<strong class="text-white">Hallucinations</strong>"). The Supplier makes no warranty that AI-generated outputs will be error-free or achieve any specific commercial conversion rate or sales volume.</p>
+        </div>
+        <div class="space-y-2">
+          <h3 class="text-base font-semibold text-slate-200">5.2 Merchant as Publisher and Principal</h3>
+          <p>The Merchant agrees that all communications sent by the AI Systems through the Merchant's connected messaging channels (WhatsApp WABA, Instagram profile, Facebook Page, Shopify storefront) are transmitted <strong class="text-white">on behalf of the Merchant as principal</strong>. The Merchant is the sole legal author and publisher of all such communications. The AI Systems have no authority to amend the Merchant's published prices, terms of sale, return policies, or consumer warranties beyond data synced from the Merchant's Shopify catalog. All binding contracts of sale are formed exclusively upon the end customer completing checkout on Shopify's settlement rail.</p>
+        </div>
+        <div class="space-y-2">
+          <h3 class="text-base font-semibold text-slate-200">5.3 Human Oversight and Governance Obligations</h3>
+          <p>The Supplier provides the Zone 5 Governance Portal, including a dual-mode Human-in-the-Loop (HITL) override queue, real-time conversation monitoring, and emergency agent kill switches.</p>
+          <p>The Merchant <strong class="text-white">covenants</strong> to:</p>
+          <ul class="list-disc pl-5 space-y-1.5">
+            <li>Maintain accurate, lawful, and current product information and policies in the Knowledge Canvas;</li>
+            <li>Regularly monitor active conversation threads and high-value buying interactions;</li>
+            <li>Promptly activate override controls or the emergency kill switch upon detecting anomalous AI behaviour;</li>
+            <li>Ensure staff responsible for supervision are adequately trained in platform governance.</li>
+          </ul>
+          <p>The Merchant's failure to maintain active supervision of the AI Systems is entirely at the Merchant's own risk.</p>
+        </div>
+        <div class="space-y-2">
+          <h3 class="text-base font-semibold text-slate-200">5.4 EU AI Act Disclosure Obligation</h3>
+          <p>Under <strong class="text-white">Article 50 of the EU AI Act (Regulation (EU) 2024/1689)</strong>, the Merchant, acting as the <strong class="text-white">Deployer</strong> of an AI system interacting directly with natural persons, must ensure that EU-based natural persons are clearly informed at the commencement of each interaction that they are communicating with an AI system.</p>
+          <p>The Supplier equips all agents with default AI identification disclosures. The Merchant <strong class="text-white">covenants not to disable, tamper with, or remove</strong> such mandatory disclosures for interactions with consumers in the EU or any other jurisdiction where AI transparency obligations apply.</p>
+        </div>
+        <div class="space-y-2">
+          <h3 class="text-base font-semibold text-slate-200">5.5 Merchant Indemnity — Conversational Content</h3>
+          <p>The Merchant shall <strong class="text-white">defend, indemnify, and hold harmless</strong> Gaia Holdings Limited, its affiliates, directors, officers, employees, and agents from and against all claims, liabilities, losses, damages, fines, penalties, costs, and expenses (including reasonable legal fees) arising out of or in connection with:</p>
+          <ul class="list-disc pl-5 space-y-1.5">
+            <li>Any communication, advice, statement, recommendation, or representation sent to an end consumer by the AI Systems via the Merchant's connected accounts;</li>
+            <li>Any investigation or enforcement action by a consumer protection authority or advertising standards body (including the ACM and AP in the Netherlands, or the PDPO in Uganda) relating to the Merchant's products or conversational marketing;</li>
+            <li>Any product liability or consumer dispute arising from orders initiated or fulfilled through the Services.</li>
+          </ul>
+        </div>
       </section>
 
-      <!-- 8. Contact & Legal Notices -->
+      <!-- 6. Third-Party Platform Dependencies -->
+      <section class="space-y-4">
+        <h2 class="text-xl font-semibold text-white tracking-tight">6. Third-Party Platform Dependencies</h2>
+        <div class="space-y-2">
+          <h3 class="text-base font-semibold text-slate-200">6.1 No Control Over Third Parties</h3>
+          <p>The Services integrate with, depend upon, and interoperate with APIs hosted by <strong class="text-white">Meta Platforms, Inc. / Meta Platforms Ireland Limited</strong> ("<strong class="text-white">Meta</strong>") and <strong class="text-white">Shopify Inc.</strong> ("<strong class="text-white">Shopify</strong>"). The Supplier has no ownership or operational control over such third-party services.</p>
+        </div>
+        <div class="space-y-2">
+          <h3 class="text-base font-semibold text-slate-200">6.2 Disclaimer of Upstream Disruptions</h3>
+          <p>The Supplier disclaims all liability for any disruption, latency, data loss, dropped webhooks, degraded performance, or total outage caused by or attributable to Meta, Shopify, or any third-party foundational model provider.</p>
+        </div>
+        <div class="space-y-2">
+          <h3 class="text-base font-semibold text-slate-200">6.3 Platform Enforcement and Continued Payment Obligations</h3>
+          <p>The Supplier bears <strong class="text-white">zero liability</strong> for any decision by Meta or Shopify to throttle messaging limits, degrade WhatsApp phone number quality ratings, suspend, ban, or restrict the Merchant's WABA, Instagram account, Facebook Page, or Shopify storefront, or deprecate APIs or alter rate limits.</p>
+          <p>Any such third-party enforcement action does <strong class="text-white">not</strong> constitute a breach by the Supplier, does <strong class="text-white">not</strong> give the Merchant any right to a refund, and does <strong class="text-white">not</strong> relieve the Merchant of its obligation to pay all applicable Subscription Fees and Performance Fees.</p>
+        </div>
+        <div class="space-y-2">
+          <h3 class="text-base font-semibold text-slate-200">6.4 Merchant Policy Compliance Warranties</h3>
+          <p>The Merchant warrants that it holds active accounts in good standing with Meta and Shopify, and shall at all times comply with Meta Terms of Service, WhatsApp Business Messaging Policy, WhatsApp Commerce Policy, Shopify Terms of Service, and applicable AI model provider acceptable use policies.</p>
+        </div>
+      </section>
+
+      <!-- 7. Fees & Billing -->
+      <section class="space-y-4">
+        <h2 class="text-xl font-semibold text-white tracking-tight">7. Fees, Billing, and Payment</h2>
+        <div class="space-y-2">
+          <h3 class="text-base font-semibold text-slate-200">7.1 Fee Structure</h3>
+          <p>Yield Force operates on a hybrid pricing model:</p>
+          <ol class="list-decimal pl-5 space-y-1.5">
+            <li><strong class="text-white">Subscription Fee:</strong> Fixed recurring monthly or annual charge.</li>
+            <li><strong class="text-white">Performance Fee:</strong> Variable fee based on Attributed Net Sales (rate per applicable pricing plan or Order Form).</li>
+            <li><strong class="text-white">Usage and Overage Charges:</strong> Additional charges for volume or channel capacity exceeding the Merchant's tier allowance.</li>
+          </ol>
+        </div>
+        <div class="space-y-2">
+          <h3 class="text-base font-semibold text-slate-200">7.2 Attributed Net Sales Definition</h3>
+          <p>"<strong class="text-white">Attributed Net Sales</strong>" means net product sales (gross merchandise value minus applied discounts, excluding VAT/sales tax and shipping) recorded against Shopify orders that are:</p>
+          <ul class="list-disc pl-5 space-y-1.5">
+            <li>Tagged with the Yield Force attribution identifier (<code class="text-blue-300">#YF-Converted</code>);</li>
+            <li>Completed within a <strong class="text-white">7-day last-touch attribution window</strong> following an active conversational interaction in which a Closer agent generated or updated a cart permalink containing the Yield Force referral parameter (<code class="text-blue-300">?ref=yf&tid=&lt;thread_id&gt;</code>); and</li>
+            <li>Not subsequently cancelled, refunded, or returned in full within the <strong class="text-white">14-day rolling reconciliation window</strong>.</li>
+          </ul>
+        </div>
+        <div class="space-y-2">
+          <h3 class="text-base font-semibold text-slate-200">7.3 Shopify App Store Billing</h3>
+          <p>For merchants accessing Yield Force via the Shopify App Store:</p>
+          <ul class="list-disc pl-5 space-y-1.5">
+            <li>Subscription Fees are billed via the <strong class="text-white">Shopify Recurring Application Charge API</strong>;</li>
+            <li>Performance Fees and overage charges are recorded via the <strong class="text-white">Shopify Usage Charge API</strong> against the Merchant's pre-authorised monthly spending cap.</li>
+          </ul>
+        </div>
+        <div class="space-y-2">
+          <h3 class="text-base font-semibold text-slate-200">7.4 VAT and Tax</h3>
+          <p>All fees are quoted <strong class="text-white">exclusive</strong> of Value Added Tax (VAT), Dutch <em>omzetbelasting</em> (BTW), and all other applicable taxes and duties.</p>
+          <ul class="list-disc pl-5 space-y-1.5">
+            <li><strong class="text-white">Netherlands-based Merchants:</strong> Dutch BTW at the prevailing rate will be added to all invoices, or the reverse-charge mechanism will apply where the Merchant provides a valid VAT identification number.</li>
+            <li><strong class="text-white">Other EU Merchants with valid EU VAT ID:</strong> The <strong class="text-white">reverse charge mechanism</strong> applies pursuant to Article 196 of EU Council Directive 2006/112/EC. If the Merchant fails to provide a valid EU VAT registration number, applicable local VAT will be charged.</li>
+          </ul>
+        </div>
+        <div class="space-y-2">
+          <h3 class="text-base font-semibold text-slate-200">7.5 Payment Default and Late Payment Interest</h3>
+          <p>If a payment method fails or a Shopify billing invoice is declined:</p>
+          <ul class="list-disc pl-5 space-y-1.5">
+            <li>The Merchant has a <strong class="text-white">7-day grace period</strong> to resolve the billing failure;</li>
+            <li>Following 7 days of non-payment, the Supplier may suspend conversational agent routing without liability;</li>
+            <li>Following 30 days of non-payment, the Supplier may terminate this Agreement pursuant to Clause 4.3;</li>
+            <li>Overdue amounts accrue interest at a commercially agreed rate from the due date until actual payment, compounding monthly, pursuant to the Uganda Contracts Act, 2010. Where proceedings are brought in the Netherlands, statutory commercial interest under <strong class="text-white">Article 6:119a of the Dutch Civil Code (BW)</strong> and statutory debt collection costs under <strong class="text-white">Article 6:96(4) BW</strong> (minimum €40) may apply.</li>
+          </ul>
+        </div>
+        <div class="space-y-2">
+          <h3 class="text-base font-semibold text-slate-200">7.6 Cancellation and Refund Policy</h3>
+          <ul class="list-disc pl-5 space-y-1.5">
+            <li>The Merchant may cancel at any time by uninstalling the application via the Shopify Admin or by providing 30 days' written notice for direct subscription contracts.</li>
+            <li><strong class="text-white">All fees paid are strictly non-refundable.</strong> No pro-rata refunds or credits will be issued for partial months, unused conversational capacity, or downtime attributable to third-party platform actions.</li>
+            <li>Unused conversation capacity expires at the end of each billing cycle and does not roll over.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 8. Intellectual Property -->
+      <section class="space-y-4">
+        <h2 class="text-xl font-semibold text-white tracking-tight">8. Intellectual Property</h2>
+        <div class="space-y-2">
+          <h3 class="text-base font-semibold text-slate-200">8.1 Supplier's Platform Rights</h3>
+          <p>Gaia Holdings Limited (or its licensors) retains all right, title, and interest — including all applicable intellectual property rights — in and to:</p>
+          <ul class="list-disc pl-5 space-y-1.5">
+            <li>The Yield Force platform, multi-zone architecture (Zones 0–7), LangGraph multi-agent swarm implementations, refinery gateway, and multi-tenant security infrastructure;</li>
+            <li>All system prompt templates, agent directives, routing heuristics, and algorithmic optimisation models (including Thompson Sampling Bayesian frameworks);</li>
+            <li>All Platform documentation, API definitions, user interface designs, and codebases;</li>
+            <li>Aggregated, anonymised telemetry and operational performance benchmarks that do not contain Customer Personal Data or identifiable Merchant trade secrets.</li>
+          </ul>
+        </div>
+        <div class="space-y-2">
+          <h3 class="text-base font-semibold text-slate-200">8.2 Merchant Data Ownership</h3>
+          <p>The Merchant retains all right, title, and interest in its pre-existing trademarks, brand assets, product catalog descriptions, images, and proprietary documentation uploaded to the Knowledge Canvas.</p>
+          <p>The Merchant grants the Supplier a <strong class="text-white">non-exclusive, worldwide, royalty-free, revocable</strong> (upon termination) license to host, process, reproduce, adapt, and transmit Merchant Data solely as necessary to provide, maintain, and support the Services.</p>
+        </div>
+        <div class="space-y-2">
+          <h3 class="text-base font-semibold text-slate-200">8.3 AI Outputs</h3>
+          <p>The Supplier assigns to the Merchant all of the Supplier's right, title, and interest (if any) in and to conversational text and cart permalinks generated by the Platform in response to Merchant inputs ("<strong class="text-white">Output</strong>"). The Merchant acknowledges that, due to the probabilistic nature of AI, other parties may independently generate identical or substantially similar outputs.</p>
+        </div>
+        <div class="space-y-2">
+          <h3 class="text-base font-semibold text-slate-200">8.4 Feedback</h3>
+          <p>If the Merchant provides suggestions, feature requests, or recommendations regarding the Services ("<strong class="text-white">Feedback</strong>"), the Merchant grants the Supplier a <strong class="text-white">perpetual, irrevocable, royalty-free, worldwide</strong> license to use, incorporate, and commercialise such Feedback without restriction or financial obligation to the Merchant.</p>
+        </div>
+      </section>
+
+      <!-- 9. Data Processing Addendum -->
+      <section class="space-y-4">
+        <h2 class="text-xl font-semibold text-white tracking-tight">9. Data Processing Addendum (GDPR Article 28 / DPPA 2019)</h2>
+        <div class="space-y-2">
+          <h3 class="text-base font-semibold text-slate-200">9.1 Roles of the Parties</h3>
+          <ul class="list-disc pl-5 space-y-1.5">
+            <li>The <strong class="text-white">Merchant</strong> is the <strong class="text-white">Data Controller</strong> — it determines the purposes and means of processing Customer Personal Data.</li>
+            <li><strong class="text-white">Gaia Holdings Limited</strong> is the <strong class="text-white">Data Processor</strong> — it processes Customer Personal Data strictly on behalf of and in accordance with the documented instructions of the Merchant.</li>
+          </ul>
+        </div>
+        <div class="space-y-2">
+          <h3 class="text-base font-semibold text-slate-200">9.2 Processing Details</h3>
+          <div class="overflow-x-auto">
+            <table class="min-w-full text-left border border-slate-800 rounded-xl overflow-hidden text-xs">
+              <thead class="bg-slate-900/80 text-slate-300 border-b border-slate-800">
+                <tr>
+                  <th class="p-3 font-semibold text-white">Element</th>
+                  <th class="p-3 font-semibold text-white">Description</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-800/60 bg-slate-900/30">
+                <tr><td class="p-3 font-semibold text-white whitespace-nowrap">Subject matter</td><td class="p-3">Provision of AI-powered sales automation and customer messaging</td></tr>
+                <tr><td class="p-3 font-semibold text-white whitespace-nowrap">Nature</td><td class="p-3">Automated AI inference, message routing, intent classification, cart generation</td></tr>
+                <tr><td class="p-3 font-semibold text-white whitespace-nowrap">Purpose</td><td class="p-3">Merchant's customer sales and support operations</td></tr>
+                <tr><td class="p-3 font-semibold text-white whitespace-nowrap">Categories of data</td><td class="p-3">Contact details (phone numbers, social IDs), conversation transcripts, order data</td></tr>
+                <tr><td class="p-3 font-semibold text-white whitespace-nowrap">Data subjects</td><td class="p-3">End consumers (shoppers) interacting with Merchant via messaging channels</td></tr>
+                <tr><td class="p-3 font-semibold text-white whitespace-nowrap">Duration</td><td class="p-3">Subscription Term plus 30-day post-termination window</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="space-y-2">
+          <h3 class="text-base font-semibold text-slate-200">9.3 Processor Obligations</h3>
+          <p>The Supplier shall:</p>
+          <ol class="list-decimal pl-5 space-y-2">
+            <li><strong class="text-white">Process only on instructions:</strong> Process Customer Personal Data only on the Merchant's documented instructions, unless required by applicable law.</li>
+            <li><strong class="text-white">Confidentiality:</strong> Ensure all personnel authorised to process Customer Personal Data are subject to binding confidentiality obligations.</li>
+            <li><strong class="text-white">Technical and Organisational Measures (TOMs):</strong> Encryption in transit (TLS 1.3) and at rest (AES-256); per-tenant data isolation via PostgreSQL Row-Level Security (RLS) bound to unique Sovereign Keys; Role-based access control (RBAC) on a least-privilege basis; HMAC-SHA256 signature verification for all Meta and Shopify webhook payloads.</li>
+            <li><strong class="text-white">Sub-processors:</strong> General written authorisation granted by the Merchant; 14 days' prior notice of any new sub-processor; Merchant may object on reasonable data protection grounds.</li>
+            <li><strong class="text-white">Data subject requests:</strong> Provide Zone 5 tools to assist the Merchant in responding to GDPR Articles 15–22 and DPPA Part V data subject requests.</li>
+            <li><strong class="text-white">Breach notification:</strong> Notify the Merchant <strong class="text-white">within 48 hours</strong> of confirming a personal data breach, with details of the nature, affected data categories, estimated number of data subjects, likely consequences, and remediation measures.</li>
+            <li><strong class="text-white">DPIAs:</strong> Provide reasonable assistance with Data Protection Impact Assessments at the Merchant's reasonable cost.</li>
+            <li><strong class="text-white">Deletion on termination:</strong> Delete or return all Customer Personal Data within 30 days of termination and provide written confirmation.</li>
+            <li><strong class="text-white">Audit rights:</strong> Allow audits by the Merchant or a mandated independent auditor, subject to: 30 days' advance notice; normal business hours; a signed NDA; no more than one audit per 12 months (unless triggered by a confirmed data breach); all audit costs borne by the Merchant.</li>
+          </ol>
+        </div>
+        <div class="space-y-2">
+          <h3 class="text-base font-semibold text-slate-200">9.4 International Data Transfers — EU → Uganda</h3>
+          <p>Uganda has not received an EU adequacy decision under GDPR Article 45. Transfers of Customer Personal Data from the EU/EEA to Gaia Holdings Limited in Uganda are governed by:</p>
+          <ul class="list-disc pl-5 space-y-1.5">
+            <li><strong class="text-white">EU Standard Contractual Clauses (SCCs)</strong> — Commission Implementing Decision (EU) 2021/914, Module 2 (Controller-to-Processor), incorporated herein by reference; and</li>
+            <li>A documented <strong class="text-white">Transfer Impact Assessment (TIA)</strong> conducted in accordance with <em>Schrems II</em> (Case C-311/18) and EDPB Recommendations 01/2020, including end-to-end encryption in transit (TLS 1.3) and at rest (AES-256), with cryptographic keys managed within the EU or by an independent EU custodian.</li>
+          </ul>
+        </div>
+        <div class="space-y-2">
+          <h3 class="text-base font-semibold text-slate-200">9.5 No Foundation Model Training</h3>
+          <p>The Supplier expressly covenants that it does <strong class="text-white">not</strong> use, transfer, or disclose Customer Personal Data, Merchant Data, or conversation transcripts to train, fine-tune, or improve any public, multi-tenant, or third-party foundational language model.</p>
+        </div>
+        <div class="space-y-2">
+          <h3 class="text-base font-semibold text-slate-200">9.6 Shopify Mandatory Webhook Compliance</h3>
+          <p>The Supplier maintains active, HMAC-verified webhook endpoints for:</p>
+          <ul class="list-disc pl-5 space-y-1.5">
+            <li><code class="text-blue-300">customers/data_request</code> — returns customer data on request;</li>
+            <li><code class="text-blue-300">customers/redact</code> — purges individual customer records within 30 days;</li>
+            <li><code class="text-blue-300">shop/redact</code> — purges all merchant tenant data within 30 days of uninstall.</li>
+          </ul>
+        </div>
+        <div class="space-y-2">
+          <h3 class="text-base font-semibold text-slate-200">9.7 Deletion Confirmation</h3>
+          <p>The Supplier will issue written confirmation of data deletion within 35 days of termination, covering all Supabase tenant tables, encrypted vault secrets, conversation logs, and backups containing the Merchant's Sovereign Key.</p>
+        </div>
+      </section>
+
+      <!-- 10. Confidentiality -->
+      <section class="space-y-3">
+        <h2 class="text-xl font-semibold text-white tracking-tight">10. Confidentiality</h2>
+        <p>Each party shall maintain the other's <strong class="text-white">Confidential Information</strong> (including technical architectures, commercial terms, pricing models, prompt engineering systems, Thompson Sampling configurations, and customer business operations) in strict confidence, using no less than reasonable commercial care. Disclosure is permitted only to personnel or professional advisers bound by equivalent obligations.</p>
+        <p>Confidentiality obligations survive termination for <strong class="text-white">5 years</strong>, except that obligations relating to trade secrets survive indefinitely.</p>
+        <p><strong class="text-white">Exclusions:</strong> Information that is publicly known, was in the receiving party's possession prior to disclosure, is independently developed, or is required to be disclosed by law or binding order.</p>
+      </section>
+
+      <!-- 11. Warranties -->
+      <section class="space-y-4">
+        <h2 class="text-xl font-semibold text-white tracking-tight">11. Warranties</h2>
+        <div class="space-y-2">
+          <h3 class="text-base font-semibold text-slate-200">11.1 Merchant Warranties</h3>
+          <p>The Merchant warrants that:</p>
+          <ul class="list-disc pl-5 space-y-1.5">
+            <li>It has full legal authority to enter into and perform this Agreement;</li>
+            <li>It will comply with all applicable laws, including EU GDPR, the Uganda DPPA 2019, the Dutch Telecommunicatiewet, the EU AI Act, and Meta and Shopify platform policies;</li>
+            <li>All Merchant Data is accurate, lawful, and does not infringe any third-party intellectual property rights;</li>
+            <li>It holds valid, active accounts in good standing with Meta and Shopify throughout the Subscription Term.</li>
+          </ul>
+        </div>
+        <div class="space-y-2">
+          <h3 class="text-base font-semibold text-slate-200">11.2 Disclaimer of Warranties</h3>
+          <p>The Services are provided on an <strong class="text-white">"AS IS" and "AS AVAILABLE"</strong> basis. The Supplier expressly disclaims all representations, conditions, and warranties, whether statutory, express, or implied, including: fitness for a particular purpose; non-infringement; uninterrupted or error-free operation; and that AI-generated outputs will be accurate or achieve any specific commercial outcome.</p>
+        </div>
+      </section>
+
+      <!-- 12. Limitation of Liability -->
+      <section class="space-y-4">
+        <h2 class="text-xl font-semibold text-white tracking-tight">12. Limitation of Liability</h2>
+        <div class="space-y-2">
+          <h3 class="text-base font-semibold text-slate-200">12.1 Non-Excludable Liabilities</h3>
+          <p>Nothing in this Agreement excludes or limits either party's liability for:</p>
+          <ul class="list-disc pl-5 space-y-1.5">
+            <li>Death or personal injury caused by its negligence;</li>
+            <li>Fraud or fraudulent misrepresentation; or</li>
+            <li>Any other liability that cannot lawfully be excluded or limited under applicable law.</li>
+          </ul>
+        </div>
+        <div class="space-y-2">
+          <h3 class="text-base font-semibold text-slate-200">12.2 Exclusion of Consequential Loss</h3>
+          <p>Subject to Clause 12.1, the Supplier shall not be liable to the Merchant — whether in contract, tort, breach of statutory duty, or otherwise — for any of the following, even if advised of their possibility:</p>
+          <ul class="list-disc pl-5 space-y-1.5">
+            <li>Loss of profits; loss of sales, revenue, or business;</li>
+            <li>Loss of agreements or commercial contracts; loss of anticipated savings;</li>
+            <li>Loss of use or corruption of software, data, or digital assets;</li>
+            <li>Loss of or damage to goodwill or commercial reputation;</li>
+            <li>Any indirect, special, punitive, or consequential loss.</li>
+          </ul>
+        </div>
+        <div class="space-y-2">
+          <h3 class="text-base font-semibold text-slate-200">12.3 Aggregate Financial Cap</h3>
+          <p>Subject to Clauses 12.1 and 12.2, the Supplier's <strong class="text-white">total aggregate liability</strong> arising out of or in connection with this Agreement — in any legal theory — shall be strictly limited to the <strong class="text-white">total fees actually paid by the Merchant to the Supplier in the twelve (12) months immediately preceding the event giving rise to the claim</strong> (or, if the claim arises within the first 12 months, the total fees paid up to that date, with a minimum floor of USD 500).</p>
+          <div class="bg-slate-900/60 border border-slate-700/50 rounded-xl p-4 text-xs text-slate-400">
+            <strong class="text-slate-300">Uganda Contracts Act, 2010 — Exclusion Clause Validity:</strong> Under Uganda law, exclusion and limitation of liability clauses between sophisticated commercial parties are enforceable in accordance with freedom of contract principles. The liability cap in Clause 12.3 is intended as a proportionate commercial allocation of risk, not a negation of core obligations.
+          </div>
+        </div>
+        <div class="space-y-2">
+          <h3 class="text-base font-semibold text-slate-200">12.4 Specific Operational Carve-Outs</h3>
+          <p>For the avoidance of doubt, the Supplier has <strong class="text-white">zero liability</strong> for:</p>
+          <ul class="list-disc pl-5 space-y-1.5">
+            <li>Commercial losses resulting from AI conversational outputs, hallucinations, or inaccurate product information communicated to shoppers;</li>
+            <li>Outages, data loss, or dropped webhooks caused by Meta or Shopify APIs;</li>
+            <li>Suspension, banning, or quality-tier degradation of the Merchant's WABA or Shopify storefront by Meta or Shopify.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 13. Force Majeure -->
+      <section class="space-y-3">
+        <h2 class="text-xl font-semibold text-white tracking-tight">13. Force Majeure</h2>
+        <p>Neither party shall be liable for failure or delay caused by circumstances beyond its reasonable control, including: acts of God; war; civil unrest; government actions; pandemic or epidemic; failure of telecommunications or internet backbone infrastructure; or disruptions to upstream AI foundation model services. The affected party must notify the other promptly and use reasonable endeavours to mitigate the impact.</p>
+      </section>
+
+      <!-- 14. General -->
+      <section class="space-y-4">
+        <h2 class="text-xl font-semibold text-white tracking-tight">14. General</h2>
+        <div class="space-y-2">
+          <h3 class="text-base font-semibold text-slate-200">14.1 Governing Law and Jurisdiction</h3>
+          <p>This Agreement is governed by and construed in accordance with the <strong class="text-white">laws of Uganda</strong>. Subject to Clause 14.2, each party irrevocably submits to the <strong class="text-white">jurisdiction of the courts of Uganda</strong> for the resolution of disputes arising out of or in connection with this Agreement.</p>
+          <p>The parties acknowledge that, pursuant to the <strong class="text-white">EU Rome I Regulation (Regulation (EC) No 593/2008, Article 3(1))</strong>, Uganda law is a valid governing law choice for commercial B2B contracts between sophisticated parties. Notwithstanding this choice of law, mandatory overriding provisions of Dutch or EU law (<em>lois de police</em> under Rome I Article 9), including mandatory GDPR provisions, shall apply to the extent required.</p>
+        </div>
+        <div class="space-y-2">
+          <h3 class="text-base font-semibold text-slate-200">14.2 Netherlands Dispute Resolution Option</h3>
+          <p>Where the Merchant is domiciled in the Netherlands or another EU Member State, either party may elect to bring proceedings before the competent courts of the Netherlands (District Court of Amsterdam — <em>Rechtbank Amsterdam</em>), particularly for matters involving EU GDPR compliance, Dutch consumer protection law, or enforcement of the DPA provisions in Clause 9.</p>
+        </div>
+        <div class="space-y-2">
+          <h3 class="text-base font-semibold text-slate-200">14.3 Entire Agreement</h3>
+          <p>This Agreement constitutes the entire agreement between the parties in relation to its subject matter and supersedes all prior agreements, representations, and understandings, whether oral or written, except in cases of fraud.</p>
+        </div>
+        <div class="space-y-2">
+          <h3 class="text-base font-semibold text-slate-200">14.4 Third Parties</h3>
+          <p>This Agreement does not confer any benefit on, nor is it enforceable by, any person other than the parties to it. End consumers of the Merchant have no rights under this Agreement.</p>
+        </div>
+        <div class="space-y-2">
+          <h3 class="text-base font-semibold text-slate-200">14.5 Severability</h3>
+          <p>If any provision is found invalid, illegal, or unenforceable, it shall be modified to the minimum extent necessary to make it enforceable, or severed if modification is not possible. All remaining provisions continue in full force.</p>
+        </div>
+        <div class="space-y-2">
+          <h3 class="text-base font-semibold text-slate-200">14.6 Waiver</h3>
+          <p>Failure or delay by either party in exercising any right or remedy shall not constitute a waiver of that right or remedy.</p>
+        </div>
+        <div class="space-y-2">
+          <h3 class="text-base font-semibold text-slate-200">14.7 Assignment</h3>
+          <p>The Merchant may not assign, transfer, or subcontract this Agreement without the Supplier's prior written consent. The Supplier may assign this Agreement in connection with a merger, acquisition, or sale of all or substantially all of its assets, with reasonable prior notice to the Merchant.</p>
+        </div>
+        <div class="space-y-2">
+          <h3 class="text-base font-semibold text-slate-200">14.8 Notices</h3>
+          <p>All notices must be in writing and delivered by email to:</p>
+          <ul class="list-disc pl-5 space-y-1.5">
+            <li><strong class="text-white">Supplier:</strong> <a href="mailto:legal@yieldforce.dev" class="text-blue-400 hover:underline">legal@yieldforce.dev</a></li>
+            <li><strong class="text-white">Merchant:</strong> The email address associated with the Merchant's Yield Force account.</li>
+          </ul>
+          <p>Notices are deemed received on the next business day following transmission, provided no delivery failure notification is received.</p>
+        </div>
+        <div class="space-y-2">
+          <h3 class="text-base font-semibold text-slate-200">14.9 Amendments</h3>
+          <p>The Supplier may amend these Terms by providing at least <strong class="text-white">30 days' written notice</strong> to the Merchant. Continued use of the Services after the effective date constitutes acceptance. If the Merchant does not accept material amendments, it may terminate without penalty in accordance with Clause 4.3.</p>
+        </div>
+      </section>
+
+      <!-- Appendix A -->
+      <section class="space-y-4 border-t border-slate-800 pt-8">
+        <h2 class="text-xl font-semibold text-white tracking-tight">Appendix A — Acceptable Use Policy</h2>
+        <div class="space-y-2">
+          <h3 class="text-base font-semibold text-slate-200">A.1 Prohibited Products and Verticals</h3>
+          <p>The Merchant shall not use Yield Force to promote, market, or sell:</p>
+          <ol class="list-decimal pl-5 space-y-1.5">
+            <li><strong class="text-white">Weapons and explosives:</strong> Firearms, ammunition, explosives, or tactical combat weapons;</li>
+            <li><strong class="text-white">Tobacco and nicotine:</strong> Cigarettes, e-cigarettes, vaping devices, or related paraphernalia;</li>
+            <li><strong class="text-white">Pharmaceuticals and controlled substances:</strong> Prescription medications, illegal drugs, or unverified health supplements making unauthorised medicinal claims;</li>
+            <li><strong class="text-white">Adult content and services:</strong> Pornography, sexually explicit products, or escort and dating services with sexual undertones;</li>
+            <li><strong class="text-white">Gambling and predatory finance:</strong> Online casinos, sports betting, lottery schemes, payday loans, binary options, or unregulated cryptocurrency schemes;</li>
+            <li><strong class="text-white">Counterfeit or infringing goods:</strong> Unauthorised replicas or materials infringing third-party intellectual property;</li>
+            <li><strong class="text-white">Dangerous goods:</strong> Toxic chemicals, hazardous biological agents, or banned wildlife products.</li>
+          </ol>
+        </div>
+        <div class="space-y-2">
+          <h3 class="text-base font-semibold text-slate-200">A.2 Prohibited Messaging Conduct</h3>
+          <p>The Merchant must comply with applicable direct marketing law, including <strong class="text-white">Article 11.7 of the Dutch Telecommunications Act (Tw)</strong> for Netherlands-based messaging, and Meta messaging policies:</p>
+          <ul class="list-disc pl-5 space-y-1.5">
+            <li><strong class="text-white">Explicit opt-in required:</strong> No unsolicited cold outbound WhatsApp marketing without prior, affirmative, verifiable consent from the recipient;</li>
+            <li><strong class="text-white">Soft opt-in (existing customers):</strong> Merchants may send direct marketing to existing customers for similar products provided they were informed and given an opt-out at collection and in each message (Art. 11.7(3) Tw);</li>
+            <li><strong class="text-white">24-hour window compliance:</strong> Outbound messaging beyond Meta's 24-hour customer service window must use pre-approved Meta Message Templates only;</li>
+            <li><strong class="text-white">Immediate opt-out:</strong> All broadcast campaigns must support standard opt-out keywords ("STOP", "UNSUBSCRIBE") with immediate processing;</li>
+            <li><strong class="text-white">No deceptive practices:</strong> No spoofed sender IDs, misleading content, hate speech, harassment, defamation, or discriminatory targeting.</li>
+          </ul>
+        </div>
+        <div class="space-y-2">
+          <h3 class="text-base font-semibold text-slate-200">A.3 Technical and Security Prohibitions</h3>
+          <p>The Merchant must not:</p>
+          <ul class="list-disc pl-5 space-y-1.5">
+            <li>Attempt adversarial prompt injection, jailbreaking, or any technique designed to bypass the Supplier's AI safety guardrails;</li>
+            <li>Decompile, reverse-engineer, or extract source code, prompt templates, or model weights;</li>
+            <li>Probe, scan, or test Platform security boundaries or attempt to circumvent multi-tenant isolation;</li>
+            <li>Resell, white-label, or sublicense the Services to third parties without a separate authorised OEM Partnership Agreement.</li>
+          </ul>
+        </div>
+        <div class="space-y-2">
+          <h3 class="text-base font-semibold text-slate-200">A.4 Enforcement</h3>
+          <p>The Supplier may immediately suspend access and/or terminate this Agreement upon reasonable suspicion of an AUP violation. All fees paid are non-refundable in cases of AUP-based termination. The Merchant must indemnify the Supplier against all third-party claims and regulatory penalties resulting from the Merchant's AUP breach.</p>
+        </div>
+      </section>
+
+      <!-- Legal Contact -->
       <section class="space-y-3 border-t border-slate-800 pt-8">
-        <h2 class="text-xl font-semibold text-white tracking-tight">8. Legal Notices & Contact</h2>
-        <p>
-          All formal notices and inquiries under this Agreement should be transmitted in writing to:
-        </p>
+        <h2 class="text-xl font-semibold text-white tracking-tight">Legal Notices &amp; Contact</h2>
         <div class="bg-slate-900/60 p-4 rounded-xl border border-slate-800 text-xs space-y-1 text-slate-300">
           <p><strong class="text-white">Entity:</strong> Gaia Holdings Limited</p>
           <p><strong class="text-white">Jurisdiction:</strong> Uganda</p>
-          <p><strong class="text-white">Legal & Commercial Enquiries:</strong> <a href="mailto:dev@yieldforce.dev" class="text-blue-400 hover:underline">dev@yieldforce.dev</a></p>
+          <p><strong class="text-white">Legal &amp; Commercial Enquiries:</strong> <a href="mailto:legal@yieldforce.dev" class="text-blue-400 hover:underline">legal@yieldforce.dev</a></p>
+          <p class="text-slate-500 pt-1">© 2026 Gaia Holdings Limited · Incorporated in Uganda</p>
         </div>
       </section>
+
     </div>
   </div>
 </Layout>
