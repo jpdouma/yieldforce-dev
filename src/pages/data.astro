@@ -155,7 +155,7 @@ import Layout from '../layouts/Layout.astro';
             We provide automated, end-to-end data erasure capabilities honoring merchant control and individual data subject requests:
           </p>
           <ul class="list-disc pl-5 space-y-2 text-xs text-slate-300">
-            <li><strong class="text-white">Merchant App Uninstall:</strong> Receipt of Shopify's <code>app/uninstalled</code> webhook triggers an automated GDPR cascade delete. All merchant credentials, active sessions, conversation logs, and catalog cache are permanently purged within 48 hours.</li>
+            <li><strong class="text-white">Merchant App Uninstall:</strong> Receipt of Shopify's <code>app/uninstalled</code> webhook triggers an automated GDPR cascade delete. All merchant credentials, active sessions, conversation logs, and catalog cache are permanently purged within <strong>30 days</strong> of uninstall, in alignment with Shopify's mandatory GDPR <code>shop/redact</code> webhook SLA.</li>
             <li><strong class="text-white">Shopify Mandatory GDPR Webhooks:</strong> Yield Force natively processes <code>customers/data_request</code>, <code>customers/redact</code>, and <code>shop/redact</code> webhooks with cryptographic receipt logging.</li>
             <li><strong class="text-white">Configurable Retention:</strong> Conversations expire and are permanently purged after 90 days by default, or immediately upon ticket resolution if configured by the merchant.</li>
           </ul>
@@ -212,6 +212,30 @@ import Layout from '../layouts/Layout.astro';
                   <a href="https://www.cloudflare.com/cloudflare-customer-dpa/" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-300 underline">cloudflare.com/dpa</a>
                 </td>
               </tr>
+              <tr>
+                <td class="p-3.5 font-semibold text-white">Meta Platforms Ireland Ltd.</td>
+                <td class="p-3.5">WhatsApp Cloud API, Instagram Messaging API, Facebook Messenger API</td>
+                <td class="p-3.5">Ireland (EU)</td>
+                <td class="p-3.5">
+                  <a href="https://www.facebook.com/legal/terms/dataprocessing" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-300 underline">Meta Business Platform DPA</a>
+                </td>
+              </tr>
+              <tr>
+                <td class="p-3.5 font-semibold text-white">Shopify Inc.</td>
+                <td class="p-3.5">Store API and webhook synchronisation (catalog, orders, inventory)</td>
+                <td class="p-3.5">Canada / Global (EU SCCs)</td>
+                <td class="p-3.5">
+                  <a href="https://www.shopify.com/legal/dpa" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-300 underline">shopify.com/legal/dpa</a>
+                </td>
+              </tr>
+              <tr>
+                <td class="p-3.5 font-semibold text-white">Stripe Payments Europe, Ltd.</td>
+                <td class="p-3.5">Merchant subscription billing and payment processing</td>
+                <td class="p-3.5">Ireland (EU)</td>
+                <td class="p-3.5">
+                  <a href="https://stripe.com/legal/dpa" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-300 underline">stripe.com/legal/dpa</a>
+                </td>
+              </tr>
             </tbody>
           </table>
         </div>
@@ -224,7 +248,7 @@ import Layout from '../layouts/Layout.astro';
           For security audits, platform compliance documentation, or vulnerability disclosure under responsible disclosure guidelines, please contact our security team directly:
         </p>
         <div class="bg-slate-900/60 p-5 rounded-xl border border-slate-800 text-xs space-y-2 text-slate-300">
-          <p><strong class="text-white">Security & Data Protection Officer Contact:</strong> <a href="mailto:dev@yieldforce.dev" class="text-blue-400 hover:underline">dev@yieldforce.dev</a></p>
+          <p><strong class="text-white">Data Protection &amp; Security Enquiries:</strong> <a href="mailto:dev@yieldforce.dev" class="text-blue-400 hover:underline">dev@yieldforce.dev</a></p>
           <p><strong class="text-white">Operating Company:</strong> Gaia Holdings Limited</p>
           <p><strong class="text-white">Governing Law:</strong> Uganda</p>
           <p class="text-slate-400">PGP encryption key available upon email request.</p>
