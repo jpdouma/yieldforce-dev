@@ -18,7 +18,7 @@ import Layout from '../layouts/Layout.astro';
     <div class="space-y-12 text-sm leading-relaxed text-slate-300">
       <!-- Channel Data Matrix -->
       <section class="space-y-4">
-        <h2 class="text-xl font-semibold text-white tracking-tight">1. Data Collected Per Connected Channel</h2>
+        <h2 class="text-xl font-semibold text-white tracking-tight">1. Data We Currently Collect &amp; Process</h2>
         <p>
           Yield Force ingests only scopes strictly required for real-time customer conversation resolution and order lookup:
         </p>
@@ -28,7 +28,7 @@ import Layout from '../layouts/Layout.astro';
           <div class="p-5 rounded-2xl border border-slate-800 bg-slate-900/60">
             <div class="flex items-center gap-2 mb-3">
               <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
-              <h3 class="font-bold text-white text-base">WhatsApp & Meta Channels</h3>
+              <h3 class="font-bold text-white text-base">WhatsApp &amp; Meta Channels</h3>
             </div>
             <p class="text-xs text-slate-400 mb-2 font-mono">Scope: WhatsApp Cloud API, Instagram Messaging, FB Messenger</p>
             <ul class="list-disc pl-4 space-y-1 text-xs text-slate-300">
@@ -43,7 +43,7 @@ import Layout from '../layouts/Layout.astro';
           <div class="p-5 rounded-2xl border border-slate-800 bg-slate-900/60">
             <div class="flex items-center gap-2 mb-3">
               <span class="w-2.5 h-2.5 rounded-full bg-emerald-400"></span>
-              <h3 class="font-bold text-white text-base">Shopify Storefront & Admin</h3>
+              <h3 class="font-bold text-white text-base">Shopify Storefront &amp; Admin</h3>
             </div>
             <p class="text-xs text-slate-400 mb-2 font-mono">Scope: read_orders, read_products, read_inventory</p>
             <ul class="list-disc pl-4 space-y-1 text-xs text-slate-300">
@@ -53,14 +53,25 @@ import Layout from '../layouts/Layout.astro';
               <li>Zero payment credentials or credit card PANs are ever accessed or stored</li>
             </ul>
           </div>
+        </div>
+      </section>
 
+      <!-- Upcoming Integrations -->
+      <section class="space-y-4">
+        <h2 class="text-xl font-semibold text-white tracking-tight">Upcoming Channel Integrations (Not Yet Active)</h2>
+        <div class="bg-amber-900/20 border border-amber-700/30 rounded-xl p-4 text-slate-300 text-xs leading-relaxed">
+          The following integrations are in active application review with the respective platforms. <strong class="text-white">No data is collected or processed through these channels</strong> until platform approval is granted and the integration is explicitly activated by a merchant.
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
           <!-- TikTok -->
-          <div class="p-5 rounded-2xl border border-slate-800 bg-slate-900/60">
-            <div class="flex items-center gap-2 mb-3">
-              <span class="w-2.5 h-2.5 rounded-full bg-pink-500"></span>
+          <div class="p-5 rounded-2xl border border-slate-700/50 bg-slate-900/40 opacity-80">
+            <div class="flex items-center gap-2 mb-1">
+              <span class="w-2.5 h-2.5 rounded-full bg-amber-400"></span>
               <h3 class="font-bold text-white text-base">TikTok For Business</h3>
             </div>
-            <p class="text-xs text-slate-400 mb-2 font-mono">Scope: Lead Generation API, Campaign Reporting</p>
+            <p class="text-xs text-amber-400 mb-2 font-medium">Status: Application pending platform approval</p>
+            <p class="text-xs text-slate-400 mb-2 font-mono">Intended scope: Lead Generation API, Campaign Reporting</p>
             <ul class="list-disc pl-4 space-y-1 text-xs text-slate-300">
               <li>Aggregated campaign ad metrics (impressions, clicks, conversions)</li>
               <li>Instant Lead Form webhook payloads for automated conversation dispatch</li>
@@ -69,18 +80,28 @@ import Layout from '../layouts/Layout.astro';
           </div>
 
           <!-- LinkedIn -->
-          <div class="p-5 rounded-2xl border border-slate-800 bg-slate-900/60">
-            <div class="flex items-center gap-2 mb-3">
-              <span class="w-2.5 h-2.5 rounded-full bg-blue-500"></span>
+          <div class="p-5 rounded-2xl border border-slate-700/50 bg-slate-900/40 opacity-80">
+            <div class="flex items-center gap-2 mb-1">
+              <span class="w-2.5 h-2.5 rounded-full bg-amber-400"></span>
               <h3 class="font-bold text-white text-base">LinkedIn Marketing Solutions</h3>
             </div>
-            <p class="text-xs text-slate-400 mb-2 font-mono">Scope: Lead Gen Forms API, Ad Analytics</p>
+            <p class="text-xs text-amber-400 mb-2 font-medium">Status: Application pending platform approval</p>
+            <p class="text-xs text-slate-400 mb-2 font-mono">Intended scope: Lead Gen Forms API, Ad Analytics</p>
             <ul class="list-disc pl-4 space-y-1 text-xs text-slate-300">
               <li>Aggregated campaign performance metrics and engagement figures</li>
               <li>Lead Gen Form submission data for automated routing to merchant CRM</li>
               <li>Form metadata and consent timestamps</li>
             </ul>
           </div>
+        </div>
+
+        <div class="text-xs text-slate-400 space-y-2 pt-1">
+          <p>Data processing under these integrations will commence only upon:</p>
+          <ol class="list-decimal pl-5 space-y-1 text-slate-300">
+            <li>Platform approval of Yield Force's developer application; and</li>
+            <li>Explicit merchant-level opt-in and channel activation.</li>
+          </ol>
+          <p class="text-slate-500 pt-1">This page will be updated to reflect active status at that time.</p>
         </div>
       </section>
 
