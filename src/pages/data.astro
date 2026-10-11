@@ -11,7 +11,7 @@ import Layout from '../layouts/Layout.astro';
       </div>
       <h1 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-3">Data Handling Disclosure</h1>
       <p class="text-sm text-slate-400 leading-relaxed max-w-2xl">
-        This technical disclosure outlines the architecture, channels, data flows, storage security, access controls, and deletion mechanisms implemented by Yield Force for compliance review with Meta, Google, TikTok, LinkedIn, and Shopify platform partner programs.
+        This technical disclosure outlines the architecture, channels, data flows, storage security, access controls, and deletion mechanisms implemented by Yield Force. It is published for transparency and for the platform partner programs we use or have applied to: Meta, Google, Shopify, TikTok and LinkedIn.
       </p>
     </div>
 
@@ -181,6 +181,7 @@ import Layout from '../layouts/Layout.astro';
             <li><strong class="text-white">Shopify Mandatory GDPR Webhooks:</strong> Yield Force natively processes <code>customers/data_request</code>, <code>customers/redact</code>, and <code>shop/redact</code> webhooks with cryptographic receipt logging.</li>
             <li><strong class="text-white">Configurable Retention:</strong> Conversations expire and are permanently purged after 90 days by default, or immediately upon ticket resolution if configured by the merchant.</li>
             <li><strong class="text-white">Google Ads Disconnection:</strong> A business can disconnect Google Ads at any time from the dashboard or at <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:underline">myaccount.google.com/permissions</a>. Disconnecting removes the stored connection and token.</li>
+            <li><strong class="text-white">Deletion Requests:</strong> Step-by-step instructions for customers and businesses are on our <a href="/data-deletion" class="text-blue-400 hover:underline">Data Deletion page</a>.</li>
           </ul>
         </div>
       </section>
