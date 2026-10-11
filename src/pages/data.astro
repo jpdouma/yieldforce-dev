@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Data Handling & Architecture Disclosure" description="Technical architecture and data handling disclosure for Yield Force integrations across Meta, Shopify, TikTok, and LinkedIn.">
+<Layout title="Data Handling & Architecture Disclosure" description="Technical architecture and data handling disclosure for Yield Force integrations across Meta, Shopify, Google Ads, TikTok, and LinkedIn.">
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
     <!-- Header -->
     <div class="mb-12 border-b border-slate-800 pb-8">
@@ -11,7 +11,7 @@ import Layout from '../layouts/Layout.astro';
       </div>
       <h1 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-3">Data Handling Disclosure</h1>
       <p class="text-sm text-slate-400 leading-relaxed max-w-2xl">
-        This technical disclosure outlines the architecture, channels, data flows, storage security, access controls, and deletion mechanisms implemented by Yield Force for compliance review with Meta, TikTok, LinkedIn, and Shopify platform partner programs.
+        This technical disclosure outlines the architecture, channels, data flows, storage security, access controls, and deletion mechanisms implemented by Yield Force for compliance review with Meta, Google, TikTok, LinkedIn, and Shopify platform partner programs.
       </p>
     </div>
 
@@ -20,7 +20,7 @@ import Layout from '../layouts/Layout.astro';
       <section class="space-y-4">
         <h2 class="text-xl font-semibold text-white tracking-tight">1. Data We Currently Collect &amp; Process</h2>
         <p>
-          Yield Force ingests only scopes strictly required for real-time customer conversation resolution and order lookup:
+          Yield Force ingests only scopes strictly required for real-time customer conversation resolution and order lookup, plus advertising campaign data when a business chooses to connect its own Google Ads account:
         </p>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -52,6 +52,27 @@ import Layout from '../layouts/Layout.astro';
               <li>Store policy URLs (returns, shipping terms, FAQ guidelines)</li>
               <li>Zero payment credentials or credit card PANs are ever accessed or stored</li>
             </ul>
+          </div>
+
+          <!-- Google Ads -->
+          <div class="p-5 rounded-2xl border border-slate-800 bg-slate-900/60 md:col-span-2">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="w-2.5 h-2.5 rounded-full bg-emerald-300"></span>
+              <h3 class="font-bold text-white text-base">Google Ads (connected by the business)</h3>
+            </div>
+            <p class="text-xs text-slate-400 mb-2 font-mono">Scope: https://www.googleapis.com/auth/adwords (OAuth 2.0, granted by the business)</p>
+            <ul class="list-disc pl-4 space-y-1 text-xs text-slate-300">
+              <li>Google Ads account identifiers, campaign names and status (enabled / paused)</li>
+              <li>Campaign performance metrics (impressions, clicks, cost, conversions), displayed to the business that connected the account</li>
+              <li>Pause / enable instructions, sent to Google Ads only when an authorised user of the business requests them</li>
+              <li>OAuth tokens, stored in the encrypted per-tenant credential vault; data is never shared across tenants</li>
+              <li>No Gmail, Drive, Contacts or other Google services are accessed</li>
+            </ul>
+            <p class="text-xs text-slate-500 mt-3 leading-relaxed">
+              Use of information received from Google APIs adheres to the
+              <a href="https://developers.google.com/terms/api-services-user-data-policy#limited-use" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:underline">Google API Services User Data Policy</a>, including the Limited Use requirements. Details:
+              <a href="/privacy#google-user-data" class="text-blue-400 hover:underline">Privacy Policy, Section 8</a>.
+            </p>
           </div>
         </div>
       </section>
@@ -142,7 +163,7 @@ import Layout from '../layouts/Layout.astro';
           <ul class="list-disc pl-5 space-y-2 text-xs text-slate-300">
             <li><strong class="text-white">Tenant Partitioning via <code>sovereign_key</code>:</strong> Every database query is scoped by an immutable, cryptographically generated sovereign key. Cross-tenant queries are rejected at the PostgreSQL query engine layer.</li>
             <li><strong class="text-white">Zero Cross-Tenant Access:</strong> Merchant A's conversational threads, orders, and knowledge embeddings can never be accessed, queried, or leaked to Merchant B.</li>
-            <li><strong class="text-white">Zero Model Training on Merchant Data:</strong> Merchant conversations and customer queries are never used to train or fine-tune public baseline LLMs. Prompts are ephemeral and processed in isolated inference containers.</li>
+            <li><strong class="text-white">Zero Model Training on Merchant Data:</strong> Merchant conversations and customer queries are never used to train or fine-tune public baseline LLMs, and Google user data received through the Google Ads API is never used to train AI models. Prompts are ephemeral and processed in isolated inference containers.</li>
           </ul>
         </div>
       </section>
@@ -158,6 +179,7 @@ import Layout from '../layouts/Layout.astro';
             <li><strong class="text-white">Merchant App Uninstall:</strong> Receipt of Shopify's <code>app/uninstalled</code> webhook triggers an automated GDPR cascade delete. All merchant credentials, active sessions, conversation logs, and catalog cache are permanently purged within <strong>30 days</strong> of uninstall, in alignment with Shopify's mandatory GDPR <code>shop/redact</code> webhook SLA.</li>
             <li><strong class="text-white">Shopify Mandatory GDPR Webhooks:</strong> Yield Force natively processes <code>customers/data_request</code>, <code>customers/redact</code>, and <code>shop/redact</code> webhooks with cryptographic receipt logging.</li>
             <li><strong class="text-white">Configurable Retention:</strong> Conversations expire and are permanently purged after 90 days by default, or immediately upon ticket resolution if configured by the merchant.</li>
+            <li><strong class="text-white">Google Ads Disconnection:</strong> A business can disconnect Google Ads at any time from the dashboard or at <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:underline">myaccount.google.com/permissions</a>. Stored OAuth tokens and Google Ads data are deleted within 30 days of disconnection.</li>
           </ul>
         </div>
       </section>
@@ -234,6 +256,14 @@ import Layout from '../layouts/Layout.astro';
                 <td class="p-3.5">Ireland (EU)</td>
                 <td class="p-3.5">
                   <a href="https://stripe.com/legal/dpa" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-300 underline">stripe.com/legal/dpa</a>
+                </td>
+              </tr>
+              <tr>
+                <td class="p-3.5 font-semibold text-white">Google LLC (Google Ads API)</td>
+                <td class="p-3.5">Source of campaign data a business chooses to connect; receives pause/enable instructions</td>
+                <td class="p-3.5">USA / Global (EU SCCs)</td>
+                <td class="p-3.5">
+                  <a href="https://business.safety.google/adsprocessorterms/" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-300 underline">Google Ads Data Processing Terms</a>
                 </td>
               </tr>
             </tbody>
