@@ -162,7 +162,7 @@ import Layout from '../layouts/Layout.astro';
         <h2 class="text-xl font-semibold text-white tracking-tight">6. Artificial Intelligence, LLMs, and Automated Decision-Making</h2>
         <div class="space-y-2">
           <h3 class="text-base font-semibold text-slate-200">6.1 AI Models Used</h3>
-          <p>Yield Force deploys Google Gemini Flash and Flash-Lite models to power intent classification, natural language response generation, sentiment analysis, and escalation detection.</p>
+          <p>Yield Force uses Google Vertex AI, with processing in the United States, to power intent classification, natural language response generation, sentiment analysis, and escalation detection.</p>
         </div>
         <div class="space-y-2">
           <h3 class="text-base font-semibold text-slate-200">6.2 No Training on Customer Data</h3>
@@ -190,58 +190,29 @@ import Layout from '../layouts/Layout.astro';
 
       <!-- 8. Google User Data -->
       <section id="google-user-data" class="space-y-4 scroll-mt-24">
-        <h2 class="text-xl font-semibold text-white tracking-tight">8. Google User Data (Google Ads API)</h2>
-        <p>Businesses may choose to connect their own Google Ads account to Yield Force. This section explains what Google user data we access, why, how it is protected, and how to disconnect and delete it. When a business connects its account, we access this data on that business's behalf and instructions, as a Data Processor (see Section 3).</p>
+        <h2 class="text-xl font-semibold text-white tracking-tight">8. Google User Data</h2>
 
         <div class="space-y-2">
-          <h3 class="text-base font-semibold text-slate-200">8.1 What We Access</h3>
-          <p>Access is requested only when a business chooses to connect Google Ads, through Google's OAuth 2.0 consent screen, using the following scope:</p>
-          <div class="bg-slate-900/60 p-4 rounded-xl border border-slate-800 text-xs font-mono text-blue-300 break-all">https://www.googleapis.com/auth/adwords</div>
-          <ul class="list-disc pl-5 space-y-1.5">
-            <li><strong class="text-white">Google Ads account and campaign data:</strong> account identifiers, campaign names and status (enabled or paused), and campaign performance metrics such as impressions, clicks, cost and conversions.</li>
-            <li><strong class="text-white">OAuth tokens:</strong> the access and refresh tokens Google issues when the business grants consent.</li>
-          </ul>
-          <p>We do not request access to Gmail, Google Drive, Google Contacts, or any other Google service.</p>
+          <h3 class="text-base font-semibold text-slate-200">8.1 Google user data</h3>
+          <p>If you connect a Google Ads account, Yield Force requests the scope <code class="text-blue-300 break-all">https://www.googleapis.com/auth/adwords</code>. We use it only to list the accounts you can access, read campaign data and performance metrics, and pause or enable campaigns when you or your authorised users ask us to. This data is stored in our database in Stockholm, Sweden, separately for each customer, and is never shared with other customers. Your access token is kept in a secrets vault.</p>
+          <p>When you ask our AI agents to work with your campaigns, relevant Google Ads data may be included in the prompts sent to Google Vertex AI in the United States to produce a response for you. We do not use customer data to train our system, and your data remains yours.</p>
         </div>
 
         <div class="space-y-2">
-          <h3 class="text-base font-semibold text-slate-200">8.2 Why We Access It and How We Use It</h3>
-          <p>We use Google Ads data only to provide the advertising campaign monitoring feature that is visible in the Yield Force dashboard:</p>
-          <ul class="list-disc pl-5 space-y-1.5">
-            <li>to <strong class="text-white">display campaign performance</strong> to the business that connected the account; and</li>
-            <li>to <strong class="text-white">pause or enable campaigns</strong>, only when an authorised user of that business instructs us to.</li>
-          </ul>
-          <p>We do not use Google user data for any other purpose.</p>
-        </div>
-
-        <div class="space-y-2">
-          <h3 class="text-base font-semibold text-slate-200">8.3 Storage and Isolation</h3>
-          <p>Google user data is stored per business (per tenant) and is never shared with, or visible to, other customers of Yield Force. OAuth tokens are held in the encrypted, per-tenant credential vault described in Section 4.1, and data is encrypted in transit (TLS) and at rest (AES-256), as described in Section 11.</p>
-        </div>
-
-        <div class="space-y-2">
-          <h3 class="text-base font-semibold text-slate-200">8.4 Limited Use Compliance</h3>
+          <h3 class="text-base font-semibold text-slate-200">8.2 Limited Use disclosure</h3>
           <div class="bg-emerald-900/20 border border-emerald-700/30 rounded-xl p-4 text-slate-300 text-xs leading-relaxed">
             <strong class="text-white">Yield Force's use and transfer to any other app of information received from Google APIs will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy#limited-use" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:underline">Google API Services User Data Policy</a>, including the Limited Use requirements.</strong>
           </div>
-          <p>In particular:</p>
-          <ul class="list-disc pl-5 space-y-1.5">
-            <li>We use Google user data only to provide or improve the user-facing features described in Section 8.2.</li>
-            <li>We do not transfer Google user data to third parties, except as necessary to provide those features, to comply with applicable law, or as part of a merger, acquisition or sale of assets with notice to affected users.</li>
-            <li>We do <strong class="text-white">not</strong> use Google user data to serve advertisements, including retargeting, personalised or interest-based advertising.</li>
-            <li>We do <strong class="text-white">not</strong> sell Google user data.</li>
-            <li>We do <strong class="text-white">not</strong> use Google user data to develop, improve or train generalised artificial intelligence or machine learning models.</li>
-            <li>Our personnel do not read Google user data, unless the business gives affirmative consent for specific data, it is necessary for security purposes (such as investigating abuse), or it is required by law.</li>
-          </ul>
         </div>
 
         <div class="space-y-2">
-          <h3 class="text-base font-semibold text-slate-200">8.5 Disconnecting and Deleting Your Data</h3>
-          <ul class="list-disc pl-5 space-y-1.5">
-            <li><strong class="text-white">Disconnect:</strong> a business can disconnect Google Ads at any time from its Yield Force dashboard, or revoke Yield Force's access directly in its Google Account at <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:underline">myaccount.google.com/permissions</a>.</li>
-            <li><strong class="text-white">Deletion:</strong> once access is disconnected, we stop accessing the account and delete the stored OAuth tokens and Google Ads data held for it within 30 days.</li>
-            <li><strong class="text-white">Request deletion:</strong> email <a href="mailto:dev@yieldforce.dev" class="text-blue-400 hover:underline">dev@yieldforce.dev</a> and we will action your request.</li>
-          </ul>
+          <h3 class="text-base font-semibold text-slate-200">8.3 Disconnecting and deletion</h3>
+          <p>You can disconnect Google Ads at any time under Configuration, Channels, which removes the stored connection and token. You can also revoke access at <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:underline">https://myaccount.google.com/permissions</a>. To request deletion of other data, write to <a href="mailto:dev@yieldforce.dev" class="text-blue-400 hover:underline">dev@yieldforce.dev</a>.</p>
+        </div>
+
+        <div class="space-y-2">
+          <h3 class="text-base font-semibold text-slate-200">8.4 International transfers</h3>
+          <p>Message content and, where you use our AI agents with your advertising data, relevant Google Ads data are processed by Google Vertex AI in the United States. Our servers are in France and our database is in Sweden.</p>
         </div>
       </section>
 
@@ -262,15 +233,15 @@ import Layout from '../layouts/Layout.astro';
             <tbody class="divide-y divide-slate-800/60 bg-slate-900/30">
               <tr>
                 <td class="p-3 font-semibold text-white whitespace-nowrap">Supabase, Inc.</td>
-                <td class="p-3">EU/EEA (Frankfurt)</td>
+                <td class="p-3">Stockholm, Sweden (EU)</td>
                 <td class="p-3">Database hosting, authentication, row-level tenant isolation</td>
-                <td class="p-3">EU data residency; SCCs where applicable</td>
+                <td class="p-3">Hosted in the EU; SCCs where applicable</td>
               </tr>
               <tr>
                 <td class="p-3 font-semibold text-white whitespace-nowrap">EU VPS Provider</td>
-                <td class="p-3">EU/EEA</td>
+                <td class="p-3">Paris, France (EU)</td>
                 <td class="p-3">Application hosting and compute</td>
-                <td class="p-3">EU data residency</td>
+                <td class="p-3">Hosted in the EU</td>
               </tr>
               <tr>
                 <td class="p-3 font-semibold text-white whitespace-nowrap">Meta Platforms Ireland Limited</td>
@@ -285,9 +256,9 @@ import Layout from '../layouts/Layout.astro';
                 <td class="p-3">EU SCCs (Module 2)</td>
               </tr>
               <tr>
-                <td class="p-3 font-semibold text-white whitespace-nowrap">Google LLC (Gemini API)</td>
+                <td class="p-3 font-semibold text-white whitespace-nowrap">Google LLC (Vertex AI)</td>
                 <td class="p-3">USA</td>
-                <td class="p-3">AI inference — zero customer data retained for training</td>
+                <td class="p-3">AI inference on message content and, where used, Google Ads data. We do not use customer data to train our system.</td>
                 <td class="p-3">EU SCCs (Module 2) + TIA</td>
               </tr>
               <tr>
@@ -333,8 +304,8 @@ import Layout from '../layouts/Layout.astro';
           <p>Transfers of personal data from Uganda to the Netherlands are authorised under <strong class="text-white">Section 19(a) of the DPPA 2019</strong>, on the basis that the Netherlands (as an EU Member State subject to the GDPR and UAVG) provides data protection standards that meet or exceed those of the DPPA. We maintain a documented adequacy assessment on file for PDPO inspection purposes (DPPR Reg. 30(5)).</p>
         </div>
         <div class="space-y-2">
-          <h3 class="text-base font-semibold text-slate-200">10.3 Core EU Data Residency</h3>
-          <p>All primary databases, conversation logs, and tenant configurations are stored within EU/EEA data centres (Supabase Frankfurt region). Cross-border processing to Uganda consists primarily of operational access for platform administration, subject to the safeguards in §10.1.</p>
+          <h3 class="text-base font-semibold text-slate-200">10.3 Where Data Is Hosted</h3>
+          <p>Servers: Paris, France. Database: Stockholm, Sweden. AI processing (Google Vertex AI) and document staging (Google Cloud Storage): United States. Cross-border processing to Uganda consists primarily of operational access for platform administration, subject to the safeguards in §10.1.</p>
         </div>
       </section>
 
@@ -371,7 +342,7 @@ import Layout from '../layouts/Layout.astro';
               <tr><td class="p-3">End-customer chat transcripts</td><td class="p-3">30–90 days (merchant-configurable)</td><td class="p-3">Processor instructions under DPA</td></tr>
               <tr><td class="p-3">Webhook ingest and API logs</td><td class="p-3">14–30 days (rolling)</td><td class="p-3">Legitimate interests — security and debugging</td></tr>
               <tr><td class="p-3">Encrypted database backups</td><td class="p-3">Rolling 14–30 days</td><td class="p-3">Disaster recovery</td></tr>
-              <tr><td class="p-3">Google Ads OAuth tokens and campaign data</td><td class="p-3">Until the business disconnects Google Ads; deleted within 30 days of disconnection</td><td class="p-3">Processor instructions under DPA; Google API Services User Data Policy</td></tr>
+              <tr><td class="p-3">Google Ads connection and access token</td><td class="p-3">Until the business disconnects Google Ads; disconnecting removes the stored connection and token</td><td class="p-3">Processor instructions under DPA; Google API Services User Data Policy</td></tr>
               <tr><td class="p-3">Financial, billing, and tax records</td><td class="p-3"><strong class="text-white">5 years</strong> from end of tax period</td><td class="p-3">Legal obligation — Uganda Tax Procedures Code Act 2014 (s.15); Uganda Companies Act 2012 (s.147)</td></tr>
               <tr><td class="p-3">Customer erasure requests (<code class="text-blue-300">customers/redact</code>)</td><td class="p-3">Purged within 30 days of receipt</td><td class="p-3">GDPR Art. 17; DPPA s.23; Shopify Partner requirements</td></tr>
               <tr><td class="p-3">Shop erasure on uninstall (<code class="text-blue-300">shop/redact</code>)</td><td class="p-3">Purged within 30 days of uninstall</td><td class="p-3">GDPR Art. 17; DPPA s.23; Shopify Partner requirements</td></tr>

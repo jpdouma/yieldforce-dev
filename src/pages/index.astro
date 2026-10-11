@@ -16,7 +16,7 @@ const faqs = [
   },
   {
     q: 'Where is my customers\u2019 data stored?',
-    a: 'Customer conversations and shop data are stored in EU regions and isolated per customer. Your data is never used to train AI models. The Data Handling page lists every data type, sub-processor and deletion rule.',
+    a: 'Our servers are in Paris, France, and customer data is stored in Stockholm, Sweden, separately for each customer. To generate AI responses, message content is processed by Google Vertex AI in the United States. We do not use customer data to train our system, and your data remains yours. The Data Handling page lists every data type and sub-processor.',
   },
   {
     q: 'Do I need technical skills to get started?',
@@ -30,8 +30,8 @@ const faqs = [
 ---
 
 <Layout
-  title="AI-Powered Sales Agent for Shopify Merchants"
-  description="Yield Force is an AI-powered sales agent for Shopify merchants. It answers customers on WhatsApp, Instagram and Facebook 24/7, and you pay a base fee plus a share of the sales it helps you win."
+  title="AI Sales and Engagement Agent for Online Merchants and Businesses"
+  description="Yield Force is an AI sales and engagement agent for online merchants and businesses. It answers customers on WhatsApp, Instagram and Facebook 24/7, and lets you monitor your own Google Ads campaigns."
 >
   <!-- Hero -->
   <section class="relative overflow-hidden pt-20 pb-20 md:pt-28 md:pb-24">
@@ -49,6 +49,9 @@ const faqs = [
 
       <p class="text-lg sm:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed mb-4">
         Yield Force answers customer questions on WhatsApp, Instagram and Facebook — 24/7, instantly, powered by AI.
+      </p>
+      <p class="text-base text-slate-400 max-w-3xl mx-auto leading-relaxed mb-4">
+        Yield Force serves online merchants, starting with Shopify, and direct business clients such as universities and local services.
       </p>
       <p class="text-base text-slate-400 max-w-2xl mx-auto leading-relaxed mb-10">
         You pay a base fee plus a share of the sales it helps you win, so our incentives match yours.
@@ -72,8 +75,8 @@ const faqs = [
       <div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs text-slate-400">
         <span class="inline-flex items-center gap-1.5"><span class="text-emerald-400">✓</span> Shopify-native</span>
         <span class="inline-flex items-center gap-1.5"><span class="text-emerald-400">✓</span> WhatsApp · Instagram · Facebook</span>
-        <span class="inline-flex items-center gap-1.5"><span class="text-emerald-400">✓</span> EU data residency</span>
-        <span class="inline-flex items-center gap-1.5"><span class="text-emerald-400">✓</span> Your data never trains AI models</span>
+        <span class="inline-flex items-center gap-1.5"><span class="text-emerald-400">✓</span> Servers and database in the EU</span>
+        <span class="inline-flex items-center gap-1.5"><span class="text-emerald-400">✓</span> Your data remains yours</span>
       </div>
     </div>
   </section>
@@ -175,11 +178,11 @@ const faqs = [
           <div class="w-12 h-12 rounded-xl bg-emerald-600/20 border border-emerald-500/30 text-emerald-400 flex items-center justify-center mb-6">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
           </div>
-          <h3 class="text-xl font-bold text-white mb-3">GDPR compliant — EU data residency</h3>
+          <h3 class="text-xl font-bold text-white mb-3">Hosted in the EU, with disclosed processing in the US</h3>
           <p class="text-sm text-slate-400 leading-relaxed flex-grow">
-            Built from day one with privacy as an architectural pillar. All customer conversations and shop data reside exclusively within EU regions. Our website uses no advertising trackers, marketing pixels or tracking cookies, and every customer's data is isolated in its own tenant.
+            Our application servers are in Paris, France, and customer data is stored in Stockholm, Sweden. To generate AI responses, message content is sent to Google Vertex AI in the United States for processing. We do not use customer data to train our system, and your data remains yours.
           </p>
-          <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center text-xs text-emerald-400 font-medium">EU Hosted · No Ad Trackers · EU GDPR</div>
+          <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center text-xs text-emerald-400 font-medium">We do not use advertising cookies or tracking pixels on this website.</div>
         </div>
       </div>
     </div>
@@ -243,7 +246,7 @@ const faqs = [
           <h2 class="text-xs font-semibold uppercase tracking-wider text-blue-400 mb-2">Advertising campaign monitoring</h2>
           <p class="text-2xl sm:text-3xl font-bold text-white tracking-tight mb-4">See what your ads are doing, and act on it, in one place</p>
           <p class="text-slate-300 leading-relaxed mb-6">
-            Businesses can connect <strong class="text-white">their own Google Ads account</strong> to Yield Force to view campaign performance next to their sales conversations, and to <strong class="text-white">pause or enable campaigns</strong> directly from the Yield Force dashboard.
+            Connect your own Google Ads account to see how your campaigns perform and to pause or enable them from Yield Force. You choose which account to connect, and you can disconnect at any time.
           </p>
           <ul class="space-y-3 text-sm text-slate-300">
             <li class="flex items-start gap-3">
@@ -279,7 +282,7 @@ const faqs = [
               <span>Clearance — Shopping</span>
               <span class="px-2 py-0.5 rounded-full bg-amber-500/15 text-amber-400 text-[10px] font-medium">Paused</span>
             </div>
-            <p class="text-[10px] text-slate-500 pt-1">Illustrative interface. Pause and enable actions require your confirmation.</p>
+            <p class="text-[10px] text-slate-500 pt-1">Illustrative interface.</p>
           </div>
         </div>
       </div>
@@ -318,7 +321,7 @@ const faqs = [
       <div class="text-center max-w-3xl mx-auto mb-14">
         <h2 class="text-xs font-semibold uppercase tracking-wider text-blue-400 mb-2">Who we serve</h2>
         <p class="text-2xl sm:text-3xl font-bold text-white tracking-tight mb-3">Built for Shopify merchants and direct business clients</p>
-        <p class="text-sm text-slate-400 leading-relaxed">Yield Force serves Shopify merchants through the Shopify App Store, and works directly with businesses that want an AI sales agent on their own messaging channels.</p>
+        <p class="text-sm text-slate-400 leading-relaxed">Yield Force serves online merchants, starting with Shopify, and works directly with businesses that want an AI sales agent on their own messaging channels.</p>
       </div>
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
         <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-8 flex flex-col">
@@ -359,16 +362,16 @@ const faqs = [
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
         <div>
-          <div class="text-sm font-bold text-white mb-1">EU data residency</div>
-          <p class="text-xs text-slate-400 leading-relaxed">Conversations and shop data stored in EU regions.</p>
+          <div class="text-sm font-bold text-white mb-1">Hosted in the EU</div>
+          <p class="text-xs text-slate-400 leading-relaxed">Servers in France, database in Sweden. AI processing in the US, disclosed.</p>
         </div>
         <div>
           <div class="text-sm font-bold text-white mb-1">Isolated per customer</div>
           <p class="text-xs text-slate-400 leading-relaxed">Database-level tenant isolation. No cross-customer access.</p>
         </div>
         <div>
-          <div class="text-sm font-bold text-white mb-1">No model training</div>
-          <p class="text-xs text-slate-400 leading-relaxed">Your data is never used to train AI models.</p>
+          <div class="text-sm font-bold text-white mb-1">Your data stays yours</div>
+          <p class="text-xs text-slate-400 leading-relaxed">We do not use customer data to train our system.</p>
         </div>
         <div>
           <div class="text-sm font-bold text-white mb-1">Open about data</div>

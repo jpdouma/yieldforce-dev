@@ -65,7 +65,8 @@ import Layout from '../layouts/Layout.astro';
               <li>Google Ads account identifiers, campaign names and status (enabled / paused)</li>
               <li>Campaign performance metrics (impressions, clicks, cost, conversions), displayed to the business that connected the account</li>
               <li>Pause / enable instructions, sent to Google Ads only when an authorised user of the business requests them</li>
-              <li>OAuth tokens, stored in the encrypted per-tenant credential vault; data is never shared across tenants</li>
+              <li>Google Ads data is stored per customer and never shared across customers; the access token is kept in a secrets vault</li>
+              <li>When you ask our AI agents to work with your campaigns, relevant Google Ads data may be included in prompts sent to Google Vertex AI in the United States</li>
               <li>No Gmail, Drive, Contacts or other Google services are accessed</li>
             </ul>
             <p class="text-xs text-slate-500 mt-3 leading-relaxed">
@@ -147,7 +148,7 @@ import Layout from '../layouts/Layout.astro';
           <div class="pt-4 border-t border-slate-800/80">
             <h4 class="text-sm font-semibold text-white mb-1">Geographic Region</h4>
             <p class="text-xs text-slate-400">
-              Database and backend hosting cluster: <strong class="text-white">European Union (Frankfurt / Ireland)</strong>. LLM inference: <strong class="text-white">Google Cloud Vertex AI (europe-west1)</strong>.
+              Servers: <strong class="text-white">Paris, France</strong>. Database: <strong class="text-white">Stockholm, Sweden</strong>. AI processing (Google Vertex AI) and document staging (Google Cloud Storage): <strong class="text-white">United States</strong>.
             </p>
           </div>
         </div>
@@ -163,7 +164,7 @@ import Layout from '../layouts/Layout.astro';
           <ul class="list-disc pl-5 space-y-2 text-xs text-slate-300">
             <li><strong class="text-white">Tenant Partitioning via <code>sovereign_key</code>:</strong> Every database query is scoped by an immutable, cryptographically generated sovereign key. Cross-tenant queries are rejected at the PostgreSQL query engine layer.</li>
             <li><strong class="text-white">Zero Cross-Tenant Access:</strong> Merchant A's conversational threads, orders, and knowledge embeddings can never be accessed, queried, or leaked to Merchant B.</li>
-            <li><strong class="text-white">Zero Model Training on Merchant Data:</strong> Merchant conversations and customer queries are never used to train or fine-tune public baseline LLMs, and Google user data received through the Google Ads API is never used to train AI models. Prompts are ephemeral and processed in isolated inference containers.</li>
+            <li><strong class="text-white">No Model Training on Customer Data:</strong> We do not use customer data to train our system. The data remains the customer's data.</li>
           </ul>
         </div>
       </section>
@@ -179,7 +180,7 @@ import Layout from '../layouts/Layout.astro';
             <li><strong class="text-white">Merchant App Uninstall:</strong> Receipt of Shopify's <code>app/uninstalled</code> webhook triggers an automated GDPR cascade delete. All merchant credentials, active sessions, conversation logs, and catalog cache are permanently purged within <strong>30 days</strong> of uninstall, in alignment with Shopify's mandatory GDPR <code>shop/redact</code> webhook SLA.</li>
             <li><strong class="text-white">Shopify Mandatory GDPR Webhooks:</strong> Yield Force natively processes <code>customers/data_request</code>, <code>customers/redact</code>, and <code>shop/redact</code> webhooks with cryptographic receipt logging.</li>
             <li><strong class="text-white">Configurable Retention:</strong> Conversations expire and are permanently purged after 90 days by default, or immediately upon ticket resolution if configured by the merchant.</li>
-            <li><strong class="text-white">Google Ads Disconnection:</strong> A business can disconnect Google Ads at any time from the dashboard or at <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:underline">myaccount.google.com/permissions</a>. Stored OAuth tokens and Google Ads data are deleted within 30 days of disconnection.</li>
+            <li><strong class="text-white">Google Ads Disconnection:</strong> A business can disconnect Google Ads at any time from the dashboard or at <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:underline">myaccount.google.com/permissions</a>. Disconnecting removes the stored connection and token.</li>
           </ul>
         </div>
       </section>
@@ -205,15 +206,15 @@ import Layout from '../layouts/Layout.astro';
               <tr>
                 <td class="p-3.5 font-semibold text-white">Supabase Inc.</td>
                 <td class="p-3.5">Primary relational database, tenant auth, row-level security</td>
-                <td class="p-3.5">EU Region (Frankfurt / Ireland)</td>
+                <td class="p-3.5">Stockholm, Sweden (EU)</td>
                 <td class="p-3.5">
                   <a href="https://supabase.com/legal/dpa" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-300 underline">supabase.com/legal/dpa</a>
                 </td>
               </tr>
               <tr>
-                <td class="p-3.5 font-semibold text-white">Google Cloud (Vertex AI)</td>
-                <td class="p-3.5">LLM inference, embeddings generation (Stateless processing)</td>
-                <td class="p-3.5">europe-west1 (Belgium)</td>
+                <td class="p-3.5 font-semibold text-white">Google Cloud (Vertex AI, Cloud Storage)</td>
+                <td class="p-3.5">AI inference, embeddings generation, and document staging</td>
+                <td class="p-3.5">United States</td>
                 <td class="p-3.5">
                   <a href="https://cloud.google.com/terms/data-processing-addendum" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-300 underline">cloud.google.com/terms/dpa</a>
                 </td>
