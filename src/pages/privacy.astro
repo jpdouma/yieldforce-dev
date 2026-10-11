@@ -106,7 +106,7 @@ import Layout from '../layouts/Layout.astro';
           <ul class="list-disc pl-5 space-y-1.5">
             <li><strong class="text-white">Identity data:</strong> Full name, business name, Shopify store URL, country.</li>
             <li><strong class="text-white">Contact data:</strong> Business email address, support contact details.</li>
-            <li><strong class="text-white">Billing data:</strong> Subscription tier, billing address, VAT/tax identification number. Raw payment card details are processed exclusively by our payment processor (Stripe Payments Europe, Ltd.) under PCI-DSS Level 1 standards; Yield Force does not store card numbers.</li>
+            <li><strong class="text-white">Billing data:</strong> Subscription tier and, for directly invoiced clients, billing address and VAT/tax identification number. For Shopify merchants, subscription billing is handled by Shopify; Yield Force does not receive or store payment card details.</li>
             <li><strong class="text-white">Credential vault data:</strong> WhatsApp Business Account (WABA) IDs, Phone Number IDs, Meta System User Tokens, Shopify API access tokens, and (where a business connects its Google Ads account) Google OAuth tokens — stored in an encrypted, per-tenant credential vault using a Bring-Your-Own-Key (BYOK) architecture.</li>
             <li><strong class="text-white">Technical and security logs:</strong> IP addresses, browser user-agent strings, login timestamps, API call logs.</li>
           </ul>
@@ -283,12 +283,6 @@ import Layout from '../layouts/Layout.astro';
                 <td class="p-3">Canada / global</td>
                 <td class="p-3">Store API and webhook synchronisation</td>
                 <td class="p-3">EU SCCs (Module 2)</td>
-              </tr>
-              <tr>
-                <td class="p-3 font-semibold text-white whitespace-nowrap">Stripe Payments Europe, Ltd.</td>
-                <td class="p-3">Ireland (EU)</td>
-                <td class="p-3">Merchant subscription billing</td>
-                <td class="p-3">EU establishment</td>
               </tr>
               <tr>
                 <td class="p-3 font-semibold text-white whitespace-nowrap">Google LLC (Gemini API)</td>
