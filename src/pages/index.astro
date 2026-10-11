@@ -1,45 +1,135 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+const faqs = [
+  {
+    q: 'Which platforms does Yield Force work with?',
+    a: 'Yield Force works with Shopify today, and answers customers on WhatsApp, Instagram and Facebook Messenger. Other commerce platforms and channels are planned. None of them are active until the platform has approved the integration and you have switched it on.',
+  },
+  {
+    q: 'Can the AI say something wrong?',
+    a: 'AI can occasionally make mistakes. Yield Force grounds its answers in your catalog, policies and FAQs, and you stay in control: watch conversations live, step in and override a reply, or switch the agent off at any time.',
+  },
+  {
+    q: 'How does pricing work?',
+    a: 'A base fee for the platform, plus a small share of the sales that Yield Force demonstrably helps you win. Messaging costs such as WhatsApp fees are billed to you directly by the provider. Shopify merchants can cancel at any time by uninstalling the app.',
+  },
+  {
+    q: 'Where is my customers\u2019 data stored?',
+    a: 'Customer conversations and shop data are stored in EU regions and isolated per customer. Your data is never used to train AI models. The Data Handling page lists every data type, sub-processor and deletion rule.',
+  },
+  {
+    q: 'Do I need technical skills to get started?',
+    a: 'No. Setup is guided: you connect your store and your messaging channels, and Yield Force reads your catalog and policies. Direct business clients can also ask for a hands-on setup by our team.',
+  },
+  {
+    q: 'What does the Google Ads feature do?',
+    a: 'It is optional. If you connect your own Google Ads account, you can see campaign performance next to your sales conversations and pause or enable campaigns when you decide to. You can disconnect at any time.',
+  },
+];
 ---
 
-<Layout title="AI-Powered Sales Agent for Shopify Merchants">
-  <!-- Hero Section -->
-  <section class="relative overflow-hidden pt-20 pb-24 md:pt-28 md:pb-32">
-    <!-- Glow effect -->
-    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-blue-600/15 blur-[120px] rounded-full pointer-events-none -z-10"></div>
+<Layout
+  title="AI-Powered Sales Agent for Shopify Merchants"
+  description="Yield Force is an AI-powered sales agent for Shopify merchants. It answers customers on WhatsApp, Instagram and Facebook 24/7, and you pay a base fee plus a share of the sales it helps you win."
+>
+  <!-- Hero -->
+  <section class="relative overflow-hidden pt-20 pb-20 md:pt-28 md:pb-24">
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[380px] bg-blue-600/15 blur-[120px] rounded-full pointer-events-none -z-10"></div>
 
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-400 text-xs font-medium mb-8">
         <span class="inline-block w-2 h-2 rounded-full bg-blue-400"></span>
-        Shopify App Ecosystem & Multi-Channel Commerce
+        Shopify App Ecosystem &amp; Multi-Channel Commerce
       </div>
 
       <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-white leading-tight mb-6">
         AI-powered sales agent for <span class="bg-gradient-to-r from-blue-400 to-indigo-300 bg-clip-text text-transparent">Shopify merchants</span>
       </h1>
 
-      <p class="text-lg sm:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed mb-10">
+      <p class="text-lg sm:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed mb-4">
         Yield Force answers customer questions on WhatsApp, Instagram and Facebook — 24/7, instantly, powered by AI.
       </p>
+      <p class="text-base text-slate-400 max-w-2xl mx-auto leading-relaxed mb-10">
+        You pay a base fee plus a share of the sales it helps you win, so our incentives match yours.
+      </p>
 
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
         <a
           href="/contact"
           class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-3.5 text-base font-semibold text-white bg-blue-600 hover:bg-blue-500 rounded-xl shadow-lg shadow-blue-600/25 transition-all focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-[#0a0f1d]"
         >
-          Contact us
+          Request access
         </a>
         <a
-          href="/data"
+          href="#how-it-works"
           class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-3.5 text-base font-semibold text-slate-300 hover:text-white bg-slate-800/80 hover:bg-slate-800 border border-slate-700 rounded-xl transition-all"
         >
-          View Data Handling
+          See how it works
         </a>
+      </div>
+
+      <div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs text-slate-400">
+        <span class="inline-flex items-center gap-1.5"><span class="text-emerald-400">✓</span> Shopify-native</span>
+        <span class="inline-flex items-center gap-1.5"><span class="text-emerald-400">✓</span> WhatsApp · Instagram · Facebook</span>
+        <span class="inline-flex items-center gap-1.5"><span class="text-emerald-400">✓</span> EU data residency</span>
+        <span class="inline-flex items-center gap-1.5"><span class="text-emerald-400">✓</span> Your data never trains AI models</span>
       </div>
     </div>
   </section>
 
-  <!-- Feature Cards Section -->
+  <!-- Problem -->
+  <section class="py-20 border-t border-slate-800/80 bg-[#080d1a]">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <h2 class="text-xs font-semibold uppercase tracking-wider text-blue-400 mb-2">The problem</h2>
+        <p class="text-2xl sm:text-3xl font-bold text-white tracking-tight">Every unanswered message is a sale that walks away</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-6">
+          <h3 class="text-base font-bold text-white mb-2">Buyers expect instant answers</h3>
+          <p class="text-sm text-slate-400 leading-relaxed">People ask about stock, delivery and sizes in the messaging apps they already use. If the answer takes hours, they buy somewhere else.</p>
+        </div>
+        <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-6">
+          <h3 class="text-base font-bold text-white mb-2">Teams can't be everywhere</h3>
+          <p class="text-sm text-slate-400 leading-relaxed">Nights, weekends and busy seasons stretch any support team. Hiring for every channel and time zone is expensive.</p>
+        </div>
+        <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-6">
+          <h3 class="text-base font-bold text-white mb-2">Marketing spend leaks</h3>
+          <p class="text-sm text-slate-400 leading-relaxed">You pay to bring people to your store, and then slow follow-up loses them. The conversation is where the sale is won.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section id="how-it-works" class="py-20 border-t border-slate-800 scroll-mt-16">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <h2 class="text-xs font-semibold uppercase tracking-wider text-blue-400 mb-2">How it works</h2>
+        <p class="text-2xl sm:text-3xl font-bold text-white tracking-tight">Live in three steps, supervised by you</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="relative rounded-2xl border border-slate-800 bg-slate-900/60 p-8">
+          <div class="w-9 h-9 rounded-full bg-blue-600/20 border border-blue-500/30 text-blue-400 flex items-center justify-center text-sm font-bold mb-5">1</div>
+          <h3 class="text-lg font-bold text-white mb-2">Connect</h3>
+          <p class="text-sm text-slate-400 leading-relaxed">Link your Shopify store and your WhatsApp, Instagram and Facebook channels. Optionally connect your own Google Ads account.</p>
+        </div>
+        <div class="relative rounded-2xl border border-slate-800 bg-slate-900/60 p-8">
+          <div class="w-9 h-9 rounded-full bg-indigo-600/20 border border-indigo-500/30 text-indigo-400 flex items-center justify-center text-sm font-bold mb-5">2</div>
+          <h3 class="text-lg font-bold text-white mb-2">Ground</h3>
+          <p class="text-sm text-slate-400 leading-relaxed">Yield Force reads your catalog, stock, shipping and returns policies, and FAQs, so its answers come from your store, not guesswork.</p>
+        </div>
+        <div class="relative rounded-2xl border border-slate-800 bg-slate-900/60 p-8">
+          <div class="w-9 h-9 rounded-full bg-emerald-600/20 border border-emerald-500/30 text-emerald-400 flex items-center justify-center text-sm font-bold mb-5">3</div>
+          <h3 class="text-lg font-bold text-white mb-2">Sell and support</h3>
+          <p class="text-sm text-slate-400 leading-relaxed">It answers instantly, checks stock and orders, sends checkout links, and hands over to your team when a human is needed.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core capabilities -->
   <section class="py-20 border-t border-slate-800/80 bg-[#080d1a]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center max-w-3xl mx-auto mb-16">
@@ -47,53 +137,49 @@ import Layout from '../layouts/Layout.astro';
         <p class="text-2xl sm:text-3xl font-bold text-white tracking-tight">Engineered for conversion, trust, and speed</p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <!-- Card 1 -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-8 hover:border-slate-700 transition-all hover:shadow-xl hover:shadow-blue-950/20 flex flex-col">
           <div class="w-12 h-12 rounded-xl bg-blue-600/20 border border-blue-500/30 text-blue-400 flex items-center justify-center mb-6">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-            </svg>
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
           </div>
           <h3 class="text-xl font-bold text-white mb-3">Instant AI responses</h3>
           <p class="text-sm text-slate-400 leading-relaxed flex-grow">
             Yield Force resolves customer inquiries within seconds on WhatsApp, Instagram Direct, and Facebook Messenger. Powered by enterprise-grade LLMs grounded in your store policies, products, and FAQs.
           </p>
-          <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center text-xs text-blue-400 font-medium">
-            24/7 Availability · Multi-channel
-          </div>
+          <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center text-xs text-blue-400 font-medium">24/7 Availability · Multi-channel</div>
         </div>
 
-        <!-- Card 2 -->
         <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-8 hover:border-slate-700 transition-all hover:shadow-xl hover:shadow-blue-950/20 flex flex-col">
           <div class="w-12 h-12 rounded-xl bg-indigo-600/20 border border-indigo-500/30 text-indigo-400 flex items-center justify-center mb-6">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
-            </svg>
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" /></svg>
           </div>
           <h3 class="text-xl font-bold text-white mb-3">Shopify-native</h3>
           <p class="text-sm text-slate-400 leading-relaxed flex-grow">
             Direct integration with Shopify Admin APIs. Accurately check stock levels, query product specifications, track order fulfillment, and offer personalized discount codes in real time without human intervention.
           </p>
-          <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center text-xs text-indigo-400 font-medium">
-            Real-time Sync · Catalog & Order Awareness
-          </div>
+          <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center text-xs text-indigo-400 font-medium">Real-time Sync · Catalog &amp; Order Awareness</div>
         </div>
 
-        <!-- Card 3 -->
+        <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-8 hover:border-slate-700 transition-all hover:shadow-xl hover:shadow-blue-950/20 flex flex-col">
+          <div class="w-12 h-12 rounded-xl bg-amber-600/20 border border-amber-500/30 text-amber-400 flex items-center justify-center mb-6">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" /></svg>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">You stay in control</h3>
+          <p class="text-sm text-slate-400 leading-relaxed flex-grow">
+            Monitor conversations live, review and override replies, route high-value buyers to your team, and switch the agent off instantly. The AI works for you, under your supervision.
+          </p>
+          <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center text-xs text-amber-400 font-medium">Human Escalation · Override · Kill Switch</div>
+        </div>
+
         <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-8 hover:border-slate-700 transition-all hover:shadow-xl hover:shadow-blue-950/20 flex flex-col">
           <div class="w-12 h-12 rounded-xl bg-emerald-600/20 border border-emerald-500/30 text-emerald-400 flex items-center justify-center mb-6">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-            </svg>
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
           </div>
           <h3 class="text-xl font-bold text-white mb-3">GDPR compliant — EU data residency</h3>
           <p class="text-sm text-slate-400 leading-relaxed flex-grow">
             Built from day one with privacy as an architectural pillar. All customer conversations and shop data reside exclusively within EU regions. Our website uses no advertising trackers, marketing pixels or tracking cookies, and every customer's data is isolated in its own tenant.
           </p>
-          <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center text-xs text-emerald-400 font-medium">
-            EU Hosted · No Ad Trackers · EU GDPR
-          </div>
+          <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center text-xs text-emerald-400 font-medium">EU Hosted · No Ad Trackers · EU GDPR</div>
         </div>
       </div>
     </div>
@@ -105,9 +191,7 @@ import Layout from '../layouts/Layout.astro';
       <div class="rounded-3xl border border-slate-800 bg-slate-900/40 p-8 md:p-12">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 class="text-2xl sm:text-3xl font-bold text-white mb-4">
-              Unified conversational commerce for high-growth brands
-            </h2>
+            <h2 class="text-2xl sm:text-3xl font-bold text-white mb-4">Unified conversational commerce for high-growth brands</h2>
             <p class="text-slate-300 leading-relaxed mb-6">
               Modern buyers expect instant support directly inside messaging apps. Yield Force connects your Shopify store to WhatsApp Cloud API, Instagram Messaging, and Facebook Messenger with automated routing and human escalation.
             </p>
@@ -118,11 +202,11 @@ import Layout from '../layouts/Layout.astro';
               </div>
               <div class="flex items-start gap-3">
                 <div class="w-5 h-5 rounded-full bg-blue-500/20 text-blue-400 flex items-center justify-center shrink-0 mt-0.5">✓</div>
-                <span class="text-sm text-slate-300"><strong class="text-white">Instagram & Facebook:</strong> Instant answers to story replies, direct messages, and comments</span>
+                <span class="text-sm text-slate-300"><strong class="text-white">Instagram &amp; Facebook:</strong> Instant answers to story replies, direct messages, and comments</span>
               </div>
               <div class="flex items-start gap-3">
                 <div class="w-5 h-5 rounded-full bg-blue-500/20 text-blue-400 flex items-center justify-center shrink-0 mt-0.5">✓</div>
-                <span class="text-sm text-slate-300"><strong class="text-white">Live Stock & Tracking:</strong> Automated updates pulling directly from Shopify GraphQL APIs</span>
+                <span class="text-sm text-slate-300"><strong class="text-white">Live Stock &amp; Tracking:</strong> Automated updates pulling directly from Shopify GraphQL APIs</span>
               </div>
             </div>
           </div>
@@ -143,6 +227,7 @@ import Layout from '../layouts/Layout.astro';
                 <span class="text-blue-400 block text-[10px] mb-1">Yield Force AI</span>
                 Yes, we have 4 units left in Forest Green (Size L). If ordered before 3 PM today with Express Delivery, it will arrive Wednesday, Sep 23rd! Would you like a direct checkout link?
               </div>
+              <p class="text-[10px] text-slate-500 pt-1">Illustrative conversation.</p>
             </div>
           </div>
         </div>
@@ -201,30 +286,133 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
-  <!-- Who We Serve -->
-  <section id="who-we-serve" class="py-16 border-t border-slate-800">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-xs font-semibold uppercase tracking-wider text-blue-400 mb-2">Who we serve</h2>
-      <p class="text-2xl font-bold text-white tracking-tight mb-4">Built for Shopify merchants and direct business clients</p>
-      <p class="text-sm text-slate-400 leading-relaxed max-w-3xl mx-auto">
-        Yield Force serves Shopify merchants through the Shopify App Store, and works directly with businesses that want an AI sales agent on their own messaging channels. Contact us to discuss your use case.
-      </p>
+  <!-- Pay for results -->
+  <section id="pricing" class="py-20 border-t border-slate-800 scroll-mt-16">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <h2 class="text-xs font-semibold uppercase tracking-wider text-blue-400 mb-2">Pricing built on results</h2>
+        <p class="text-2xl sm:text-3xl font-bold text-white tracking-tight mb-3">We only do well when you do</p>
+        <p class="text-sm text-slate-400 leading-relaxed">Most software charges for access. Yield Force charges for access and for outcomes, so our incentives match yours.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-8">
+          <h3 class="text-base font-bold text-white mb-2">A base fee</h3>
+          <p class="text-sm text-slate-400 leading-relaxed">A simple plan fee for the platform, the channels and the supervision tools.</p>
+        </div>
+        <div class="rounded-2xl border border-blue-500/30 bg-blue-500/5 p-8">
+          <h3 class="text-base font-bold text-white mb-2">A share of sales it helps win</h3>
+          <p class="text-sm text-slate-400 leading-relaxed">A small percentage of net sales from orders that Yield Force-assisted conversations led to, tracked transparently against your own orders.</p>
+        </div>
+        <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-8">
+          <h3 class="text-base font-bold text-white mb-2">Messaging at cost</h3>
+          <p class="text-sm text-slate-400 leading-relaxed">WhatsApp and other messaging fees are billed to you directly by the provider, on your own account, with no markup from us.</p>
+        </div>
+      </div>
+      <p class="text-center text-xs text-slate-500 mt-6">Plan details are shown at install and in your agreement. <a href="/terms" class="text-blue-400 hover:underline">Read the Terms of Service</a>.</p>
+    </div>
+  </section>
+
+  <!-- Who it is for -->
+  <section id="who-we-serve" class="py-20 border-t border-slate-800/80 bg-[#080d1a] scroll-mt-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <h2 class="text-xs font-semibold uppercase tracking-wider text-blue-400 mb-2">Who we serve</h2>
+        <p class="text-2xl sm:text-3xl font-bold text-white tracking-tight mb-3">Built for Shopify merchants and direct business clients</p>
+        <p class="text-sm text-slate-400 leading-relaxed">Yield Force serves Shopify merchants through the Shopify App Store, and works directly with businesses that want an AI sales agent on their own messaging channels.</p>
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-8 flex flex-col">
+          <div class="text-xs font-semibold uppercase tracking-wider text-blue-400 mb-3">Shopify merchants</div>
+          <h3 class="text-xl font-bold text-white mb-3">Turn messaging into a sales channel</h3>
+          <ul class="space-y-2 text-sm text-slate-300 mb-8 flex-grow">
+            <li class="flex gap-2"><span class="text-blue-400">✓</span> Answer stock, delivery and order questions instantly</li>
+            <li class="flex gap-2"><span class="text-blue-400">✓</span> Send checkout links inside the conversation</li>
+            <li class="flex gap-2"><span class="text-blue-400">✓</span> Cover nights, weekends and peak season</li>
+          </ul>
+          <a href="/contact" class="inline-flex items-center justify-center px-5 py-2.5 text-sm font-semibold text-white bg-blue-600 hover:bg-blue-500 rounded-xl transition-all">Request access</a>
+        </div>
+
+        <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-8 flex flex-col">
+          <div class="text-xs font-semibold uppercase tracking-wider text-indigo-400 mb-3">Direct business clients</div>
+          <h3 class="text-xl font-bold text-white mb-3">Beyond e-commerce</h3>
+          <p class="text-sm text-slate-400 leading-relaxed mb-4">Universities, professional services and local businesses live on enquiries. Yield Force qualifies leads, answers questions and guides people to the next step, whether that is an enrolment, a booking or a purchase.</p>
+          <ul class="space-y-2 text-sm text-slate-300 mb-8 flex-grow">
+            <li class="flex gap-2"><span class="text-indigo-400">✓</span> Set up with you, or for you by our team</li>
+            <li class="flex gap-2"><span class="text-indigo-400">✓</span> Results-linked fee tied to your own success metric</li>
+          </ul>
+          <a href="mailto:dev@yieldforce.dev?subject=Business%20enquiry%20-%20Yield%20Force" class="inline-flex items-center justify-center px-5 py-2.5 text-sm font-semibold text-white bg-indigo-600 hover:bg-indigo-500 rounded-xl transition-all">Discuss your use case</a>
+        </div>
+
+        <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-8 flex flex-col">
+          <div class="text-xs font-semibold uppercase tracking-wider text-emerald-400 mb-3">Agencies &amp; partners</div>
+          <h3 class="text-xl font-bold text-white mb-3">Add AI sales to your offer</h3>
+          <p class="text-sm text-slate-400 leading-relaxed mb-4">Digital agencies, consultants and fulfilment partners can bring Yield Force to their clients and keep their own setup and strategy fees. We are building a partner programme and welcome early interest.</p>
+          <div class="flex-grow"></div>
+          <a href="mailto:dev@yieldforce.dev?subject=Partnership%20enquiry%20-%20Yield%20Force" class="inline-flex items-center justify-center px-5 py-2.5 text-sm font-semibold text-white bg-emerald-600 hover:bg-emerald-500 rounded-xl transition-all">Register your interest</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust -->
+  <section class="py-16 border-t border-slate-800">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
+        <div>
+          <div class="text-sm font-bold text-white mb-1">EU data residency</div>
+          <p class="text-xs text-slate-400 leading-relaxed">Conversations and shop data stored in EU regions.</p>
+        </div>
+        <div>
+          <div class="text-sm font-bold text-white mb-1">Isolated per customer</div>
+          <p class="text-xs text-slate-400 leading-relaxed">Database-level tenant isolation. No cross-customer access.</p>
+        </div>
+        <div>
+          <div class="text-sm font-bold text-white mb-1">No model training</div>
+          <p class="text-xs text-slate-400 leading-relaxed">Your data is never used to train AI models.</p>
+        </div>
+        <div>
+          <div class="text-sm font-bold text-white mb-1">Open about data</div>
+          <p class="text-xs text-slate-400 leading-relaxed"><a href="/data" class="text-blue-400 hover:underline">Data handling</a> · <a href="/privacy" class="text-blue-400 hover:underline">Privacy</a> · <a href="/terms" class="text-blue-400 hover:underline">Terms</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="py-20 border-t border-slate-800/80 bg-[#080d1a] scroll-mt-16">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-10">
+        <h2 class="text-xs font-semibold uppercase tracking-wider text-blue-400 mb-2">FAQ</h2>
+        <p class="text-2xl sm:text-3xl font-bold text-white tracking-tight">Questions we hear most</p>
+      </div>
+      <div class="space-y-3">
+        {faqs.map((f) => (
+          <details class="group rounded-xl border border-slate-800 bg-slate-900/60 px-5 py-4">
+            <summary class="cursor-pointer list-none flex items-center justify-between gap-4 text-sm font-semibold text-white">
+              {f.q}
+              <span class="text-slate-500 group-open:rotate-45 transition-transform text-lg leading-none">+</span>
+            </summary>
+            <p class="mt-3 text-sm text-slate-400 leading-relaxed">{f.a}</p>
+          </details>
+        ))}
+      </div>
     </div>
   </section>
 
   <!-- CTA Banner -->
-  <section class="py-16 bg-[#070b16] border-t border-slate-800">
+  <section class="py-20 bg-[#070b16] border-t border-slate-800">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-3xl font-bold text-white mb-4">Ready to automate your merchant sales?</h2>
+      <h2 class="text-3xl font-bold text-white mb-4">Ready to turn conversations into sales?</h2>
       <p class="text-slate-400 text-sm max-w-xl mx-auto mb-8">
-        Get in touch with our engineering and merchant partnership team to request access to the Yield Force Shopify app.
+        Get in touch to request access to the Yield Force Shopify app, or to talk about your business.
       </p>
-      <a
-        href="/contact"
-        class="inline-flex items-center justify-center px-8 py-3.5 text-sm font-semibold text-white bg-blue-600 hover:bg-blue-500 rounded-xl shadow-lg transition-all"
-      >
-        Contact us
-      </a>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="/contact" class="inline-flex items-center justify-center px-8 py-3.5 text-sm font-semibold text-white bg-blue-600 hover:bg-blue-500 rounded-xl shadow-lg transition-all">Request access</a>
+        <a href="mailto:dev@yieldforce.dev?subject=Business%20enquiry%20-%20Yield%20Force" class="inline-flex items-center justify-center px-8 py-3.5 text-sm font-semibold text-slate-300 hover:text-white bg-slate-800/80 hover:bg-slate-800 border border-slate-700 rounded-xl transition-all">Talk to us about your business</a>
+      </div>
+      <p class="text-xs text-slate-500 mt-8">
+        Investor or strategic partner? <a href="mailto:dev@yieldforce.dev?subject=Investor%20enquiry%20-%20Yield%20Force" class="text-blue-400 hover:underline">Get in touch</a>.
+      </p>
     </div>
   </section>
 </Layout>
